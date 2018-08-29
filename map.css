@@ -4,6 +4,7 @@ html, body{
 	color: #000099;
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 10pt;
+	text-align: center;
 	}
 
 a:link{
@@ -17,6 +18,21 @@ a:visited{
 	}
 
 a:hover{
-	color: #ff0000;
+	color: #0000ff;
 	text-decoration: none;
+	}
+
+#title{
+	font-size: 20pt;
+	color: #000000;
+	}
+
+#subtitle{
+	font-size: 15pt;
+	color: #000000;
+	}
+
+.section{
+	font-size: 12pt;
+	color: #000000;
 	}
