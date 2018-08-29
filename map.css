@@ -4,7 +4,7 @@ html, body{
 	color: Black;
 	background-color: #ffffcc;
 	font-family: Verdana, "DejaVu Sans", sans-serif;
-	font-size: 12pt;
+	font-size: 15px;
 	text-align: center;
 	}
 
@@ -24,17 +24,17 @@ a:hover{
 	}
 
 #title{
-	font-size: 35pt;
+	font-size: 270%;
 	font-family: Georgia, "Bitstream Charter", sans-serif;
 	}
 
 #subtitle{
-	font-size: 20pt;
+	font-size: 180%;
 	font-family: Georgia, "Bitstream Charter", sans-serif;
 	}
 
 .section{
-	font-size: 12pt;
+	font-size: 130%;
 	}
 
 ul li	{
