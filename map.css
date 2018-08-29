@@ -1,0 +1,22 @@
+html, body{
+	margin-left: .5cm;
+	margin-right: .5cm;
+	color: #000099;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	}
+
+a:link{
+	text-decoration: none;
+	color: #009900 ;
+	}
+
+a:visited{
+	text-decoration: none;
+	color: Gray;
+	}
+
+a:hover{
+	color: #ff0000;
+	text-decoration: none;
+	}
