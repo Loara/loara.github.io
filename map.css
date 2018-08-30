@@ -17,6 +17,7 @@ html, body{
 }
 
 a:link{
+	font-size: 110%;
 	text-decoration: none;
 	color: #0099cc ;
 	}
