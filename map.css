@@ -1,12 +1,20 @@
 html, body{
-	margin-left: .5cm;
-	margin-right: .5cm;
-	color: Black;
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #000033;
 	background-color: #ffffcc;
 	font-family: Verdana, "DejaVu Sans", sans-serif;
-	font-size: 15px;
+	font-size: 20px;
 	text-align: center;
 	}
+
+@media only screen and (min-width:100px) and (max-width:748px){
+html, body{
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 18px;
+	}
+}
 
 a:link{
 	text-decoration: none;
@@ -29,7 +37,7 @@ a:hover{
 	}
 
 #subtitle{
-	font-size: 180%;
+	font-size: 150%;
 	font-family: Georgia, "Bitstream Charter", sans-serif;
 	}
 
@@ -37,6 +45,3 @@ a:hover{
 	font-size: 130%;
 	}
 
-ul li	{
-	list-style-type: square;
-	}
