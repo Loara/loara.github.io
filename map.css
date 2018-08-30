@@ -4,8 +4,12 @@ html, body{
 	color: #000033;
 	background-color: #ffffcc;
 	font-family: Verdana, "DejaVu Sans", sans-serif;
-	font-size: 20px;
+	font-size: 125%;
 	text-align: center;
+	}
+
+.link{
+	margin: 0;
 	}
 
 @media only screen and (min-width:100px) and (max-width:748px){
@@ -14,10 +18,14 @@ html, body{
 	margin-right: 0;
 	font-size: 18px;
 	}
+
+.link{
+	margin: 15px 0;
+	}
 }
 
 a:link{
-	font-size: 110%;
+	font-size: 1.1em;
 	text-decoration: none;
 	color: #0099cc ;
 	}
@@ -32,17 +40,17 @@ a:hover{
 	text-decoration: none;
 	}
 
-#title{
-	font-size: 270%;
+h1{
+	font-size: 2.5em;
 	font-family: Georgia, "Bitstream Charter", sans-serif;
 	}
 
-#subtitle{
-	font-size: 150%;
+h3{
+	font-size: 1.6em;
 	font-family: Georgia, "Bitstream Charter", sans-serif;
 	}
-
-.section{
-	font-size: 130%;
+h5{
+	font-size: 1.3em;
 	}
+
 
