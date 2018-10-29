@@ -52,9 +52,31 @@ function SprossimoIncontro(d){
 	return ret;
 }
 
+function iterate(i, d){
+	var j, len;
+	len = impegni.length;
+	for(j = i; j < len; j++){
+		if(impegni[j] == "n"){
+			if(d >= geti(j+1) && d <= geti(j+2)){
+				return iterate(j+3, SprossimoIncontro(geti(j+2)));
+			}
+			else
+				j += 2;
+		}
+		else if(impegni[j] == "i"){
+			if(d >= geti(j+1)){
+				return geti(j+1);
+			}
+			else
+				j += 1;
+		}
+	}
+	return d;
+}
+
 function primoBuono(d, c){
 	//c è il giorno corrente, vanno eliminati gli eventi passati
-	var i, j, len, ret;
+	var i, j, len;
 	len = impegni.length;
 	for(i=0; i<len; i++){
 		if(impegni[i] == "n"){
@@ -72,27 +94,10 @@ function primoBuono(d, c){
 	}
 	if(i >= len)
 		return d;
-	for(j = i; j < len; j++){
-		if(impegni[j] == "n"){
-			if(d >= geti(j+1) && d <= geti(j+2)){
-				return primoBuono(SprossimoIncontro(geti(j+2)), c);
-			}
-			else
-				j += 2;
-		}
-		else if(impegni[j] == "i"){
-			if(d >= geti(j+1)){
-				return geti(j+1);
-			}
-			else
-				j += 1;
-		}
-	}
-	return d;
+	return iterate(i, d);
 }
 
 function ppi(c){
 	return primoBuono(prossimoIncontro(c), c);
 }
-
 
