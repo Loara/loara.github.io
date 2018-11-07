@@ -28,7 +28,7 @@ function prossimoIncontro(d){
 	*/
 	var i = d.getDay();
 	var n = (11 - i) % 7;
-	if(i == 4 && d.getHours() > 16){
+	if(n == 0 && d.getHours() > 16){
 		n = 7;
 	}
 	var ret = new Date(d.toString());
