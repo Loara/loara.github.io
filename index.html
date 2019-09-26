@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico" size="16x16" type="image/vnd.microsoft.icon">
+
+    <title>Paolo De Donato - Personal Webpage</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="assets/js/switch.js"></script>
+  </head>
+
+  <body>
+    <div id="navigation"><div class="nav_brand" onclick="mainpage()">Paolo De Donato</div><div class="nav_fill"></div>
+
+<div class="nav_button"><div id="nav_label" onclick="my_toggle()"></div></div>
+
+<div class="nav_menu"><a id="hom" class="active" href="#mtitle" onclick="mainpage()">Home</a><a id="cur" href="#mtitle" onclick="curpage()">Curriculum</a><a id="pub" href="#mtitle" onclick="pubpage()">Pubblicazioni</a><a id="res" href="#mtitle" onclick="respage()">Risorse</a></div></div>
+<div id="nav_drop">
+<a id="hom2" href="#mtitle" onclick="mainpage2()">Home</a>
+<a id="cur2" href="#mtitle" onclick="curpage2()">Curriculum</a>
+<a id="pub2" href="#mtitle" onclick="pubpage2()">Pubblicazioni</a>
+<a id="res2" href="#mtitle" onclick="respage2()">Risorse</a></div>
+
+	<div id="headerwrap">
+	<h1 id="mtitle">PAOLO DE DONATO</h1>
+	</div><! --/headerwrap -->
+	
+	<section id="mbody"></section>
+	<div class="container">
+		<div id="main" class="centered mt mb">
+			<noscript>
+			<div class="no_java">
+				Si prega di abilitare Javascript per garantire un corretto funzionamento del sito.
+			</div>
+			</noscript>
+		</div><!-- /row -->
+	</div><!-- /container -->
+	
+
+	<div id="footerwrap">
+		<a href="#mtitle" onclick="curpage()">CURRICULUM</a>
+		<a href="#mtitle" onclick="pubpage()">PUBBLICAZIONI</a>
+		<a href="#mtitle" onclick="respage()">RISORSE</a>
+	</div><! --/footerwrap -->
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script>
+		mainpage();
+	</script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> -->
+  </body>
+</html>
