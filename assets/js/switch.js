@@ -65,13 +65,13 @@ function curpage(){
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>2017</p></div><div class=\"cur_des\"><p>Laurea in Matematica all\' Università degli Studi di Napoli \"Federico II\"</p><p>Titolo tesi: Il teorema di Rouché e applicazioni</p><p>Relatore: Luigi Greco</p><p>Voto di laurea: 110/110 <i>cum laude</i></p></div></div>\
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>2019</p></div><div class=\"cur_des\"><progress>Coming soon...</progress></div></div>\
 		<h2>Riconoscimenti e premi</h2>\
-		<div class=\"cur_row\"><div class=\"cur_date\"><p>5-8 maggio 2011</p></div><div class=\"cur_des\"><p>Ammissione fase nazionale delle Olimpiadi della Matematica a Cesenatico.</p></div></div>\
-		<div class=\"cur_row\"><div class=\"cur_date\"><p>9-12 maggio 2013</p></div><div class=\"cur_des\"><p>Medaglia di bronzo alle Olimpiadi della Matematica a Cesenatico.</p></div></div>\
-		<div class=\"cur_row\"><div class=\"cur_date\"><p>8-11 maggio 2014</p></div><div class=\"cur_des\"><p>Medaglia d'argento alle Olimpiadi della Matematica a Cesenatico.</p></div></div>\
+		<div class=\"cur_row\"><div class=\"cur_date\"><p>5-8 maggio 2011</p></div><div class=\"cur_des\"><p>Ammissione fase nazionale delle Olimpiadi nazionali della Matematica a Cesenatico.</p></div></div>\
+		<div class=\"cur_row\"><div class=\"cur_date\"><p>9-12 maggio 2013</p></div><div class=\"cur_des\"><p>Medaglia di bronzo alle Olimpiadi nazionali della Matematica a Cesenatico.</p></div></div>\
+		<div class=\"cur_row\"><div class=\"cur_date\"><p>8-11 maggio 2014</p></div><div class=\"cur_des\"><p>Medaglia d'argento alle Olimpiadi nazionali della Matematica a Cesenatico.</p></div></div>\
 		<h2>Seminari e conferenze</h2>\
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>16-19 dicembre 2018</p></div><div class=\"cur_des\"><p>Partecipazione al ciclo di seminari \"Junior Math Days\" presso il dipartimento di matematica della SISSA a Trieste.</p></div></div>\
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>16-17 aprile 2019</p></div><div class=\"cur_des\"><p>Partecipazione al ciclo di seminari \"Some topics of Geometric Analysis and Geometric Measure Theory\" presso il centro di ricerca matematica Ennio De Giorgi a Pisa.</p></div></div>\
-		<div class=\"cur_row\"><div class=\"cur_date\"><p>22 luglio -16 agosto 2019</p></div><div class=\"cur_des\"><p>Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, durante il quale sono stati seguiti i seguenti corsi:</p> <p>Analisi Funzionale (tenuto dal prof. Marius Ghergu, votazione A+)</p> <p>Geometria Differenziale (tenuto dal prof. Liviu Ornea, votazione A++).</p></div></div>\
+		<div class=\"cur_row\"><div class=\"cur_date\"><p>22 luglio -16 agosto 2019</p></div><div class=\"cur_des\"><p>Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, durante il quale sono stati seguiti i seguenti corsi:</p> <p><b>Analisi Funzionale</b> (tenuto dal prof. Marius Ghergu, votazione A+)</p> <p><b>Geometria Differenziale</b> (tenuto dal prof. Liviu Ornea, votazione A++).</p></div></div>\
 		</div><div class=\"cur_ltr\"></div></div>";
 	document.getElementById("cur").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Curriculum";
