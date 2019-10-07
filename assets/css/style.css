@@ -206,6 +206,13 @@ a, a:focus, a:hover {
 	display: inline-block;
 }
 
+.maimage{
+	max-width:25%;
+	height:auto;
+	margin-top:-50px;
+	border-radius:10%
+}
+
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
@@ -403,6 +410,9 @@ table
 		width: 20px;
 		height: 20px;
 		background-color: #68a1fc;
+	}
+	.maimage{
+		max-width:60%;
 	}
 	#headerwrap{
 		height: 140px;
