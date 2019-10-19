@@ -45,7 +45,7 @@ function respage2(){
 
 function mainpage(){
 	rmall();
-	document.getElementById("main").innerHTML = "<div><img src=\"assets/img/bishop.jpg\" class=\"maimage\"></div><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><h3 style=\"margin: 0 10%;text-align:right;font-family: \'Indie Flower\';font-style:italic\">Ennio De Giorgi</h3>";
+	document.getElementById("main").innerHTML = "<div><img src=\"assets/img/foto.jpg\" class=\"maimage\"></div><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><h3 style=\"margin: 0 10%;text-align:right;font-family: \'Indie Flower\';font-style:italic\">Ennio De Giorgi</h3>";
 	document.getElementById("hom").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Paolo De Donato";
 }
@@ -61,7 +61,7 @@ function curpage(){
 	rmall();
 	document.getElementById("main").innerHTML = "<div class=\"cur_cont\"><div class=\"cur_ltr\"></div><div class=\"cur_ctr\">\
 		<h2>Formazione</h2>\
-		<div class=\"cur_row\"><div class=\"cur_date\"><p>2019</p></div><div class=\"cur_des\"><progress>Coming soon...</progress></div></div>\
+		<div class=\"cur_row\"><div class=\"cur_date\"><p>2019</p></div><div class=\"cur_des\"><p>Laurea magistrale in Matematica all\' Università degli Studi di Napoli \"Federico II\"</p><p>Titolo tesi: The quantitative isoperimetric inequality</p><p>Relatore: Nicola Fusco</p><p>Voto di laurea: 110/110 <i>cum laude</i></p></div></div>\
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>2017</p></div><div class=\"cur_des\"><p>Laurea in Matematica all\' Università degli Studi di Napoli \"Federico II\"</p><p>Titolo tesi: Il teorema di Rouché e applicazioni</p><p>Relatore: Luigi Greco</p><p>Voto di laurea: 110/110 <i>cum laude</i></p></div></div>\
 		<div class=\"cur_row\"><div class=\"cur_date\"><p>2014</p></div><div class=\"cur_des\"><p>Maturità scientifica</p></div></div>\
 		<h2>Riconoscimenti e premi</h2>\
