@@ -300,14 +300,15 @@ curriculum
 	display: flex;
 	margin: 10px 0;
 }
-
+/*
 .cur_row p{
 	margin-bottom: 5px;
-}
+}*/
 
 .cur_date{
 	flex-basis: 0;
 	flex-grow: 1;
+	flex-shrink: 1;
 	text-align: right;
 	padding: 0 30px;
 }
@@ -315,6 +316,7 @@ curriculum
 .cur_des{
 	flex-basis: 0;
 	flex-grow: 3;
+	flex-shrink: 3;
 	text-align: left;
 	padding: 0 30px;
 }
@@ -377,16 +379,16 @@ table
 
 @media only screen and (max-width: 748px){
 	html, body{
-		font-size: 15px;
+		font-size: 13px;
 	}
 	h1 {
-		font-size: 30px;
+		font-size: 27px;
 	}
 	h2 {
-		font-size: 21px;
+		font-size: 18px;
 	}
 	h3 {
-		font-size: 17px;
+		font-size: 15px;
 	}
 
 	.cur_ltr{
@@ -415,6 +417,14 @@ table
 		width: 20px;
 		height: 20px;
 		background-color: #68a1fc;
+	}
+
+	.cur_date{
+		padding: 0 5px;
+	}
+
+	.cur_des{
+		padding: 0 10px;
 	}
 	.maimage{
 		max-width:50%;
