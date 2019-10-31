@@ -45,7 +45,7 @@ function respage2(){
 
 function mainpage(){
 	rmall();
-	document.getElementById("main").innerHTML = "<div><img src=\"../assets/img/foto.jpg\" class=\"maimage\"></div><div><h2 style=\"margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><div><h2 style=\"font-family: \'Montserrat\';margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><h3 style=\"margin: 0 10%;text-align:right;font-family: \'Indie Flower\';font-style:italic\">Ennio De Giorgi</h3>";
+	document.getElementById("main").innerHTML = "<div><img src=\"../assets/img/foto.jpg\" class=\"maimage\"></div><div><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">\"Io penso che all'origine della creatività ci sia quella che io chiamo la capacità o la disponibilità a sognare; a immaginare mondi diversi, cose diverse, cercando di combinarle nella propria immaginazione in vario modo.\"</h2><h3 style=\"margin: 0 10%;text-align:right;font-family: \'Indie Flower\';font-style:italic\">Ennio De Giorgi</h3>";
 	document.getElementById("hom").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Paolo De Donato";
 }
