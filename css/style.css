@@ -1,28 +1,20 @@
 /*
- * Author: Carlos Alvarez
- * URL: http://Alvarez.is
+ * Tema rielaborato a partire dal tema di Carlos Alvarez
+ * URL del'autore originale: http://Alvarez.is
  *
- * Project Name: NYC Design
- * Version: 1.0
- * Date: 04-20-2014
- * URL: 
+ * Progetto originale: NYC Design
+ * Versione: 1.0
+ * Data: 04-20-2014
  */
-
-
-/* ==========================================================================
-   Base Styles, Bootstrap Modifications & Fonts Import
-   ========================================================================== */
-
-/*@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);*/
 
 @font-face {
     font-family: 'Indie Flower';
-    src: url('../fonts/Indie_Flower/IndieFlower-Regular.ttf');
+    src: url('../font/IndieFlower-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+    src: url('../font/Montserrat-Regular.ttf');
 }
 
 
@@ -172,6 +164,19 @@ a, a:focus, a:hover {
 	overflow-y: hidden; /* quello che esce fuori si nasconde */
 }
 
+#nav_lan{
+	display: block;
+	position: fixed;
+	font-weight: bold;
+	top: 65px;
+	left: 0;
+	width: auto;
+	height: 0;
+	background-color: rgba(207, 207, 207, 0.8);
+	z-index: 1;
+	overflow-y: hidden; /* quello che esce fuori si nasconde */
+}
+
 .nav_menu > a, .nav_menu > a:hover, .nav_menu > a:focus, #nav_drop a, #nav_drop a:hover, #nav_drop a:focus{
 	color: #2270c9;
 	text-align: center;
@@ -181,6 +186,18 @@ a, a:focus, a:hover {
 	padding-top: 20px;
 	cursor: pointer;
 	border-bottom: 3px solid transparent;
+	display: block;
+	text-align: center;
+}
+
+#nav_lan a, #nav_lan a:hover, #nav_lan a:focus{
+	color: black;
+	text-align: center;
+	background-color: transparent;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 20px;
+	cursor: pointer;
 	display: block;
 	text-align: center;
 }
@@ -367,7 +384,7 @@ table
 		display: block;/*non cambia più la visualizzazione, ma solo la dimensione */
 	}
 	#nav_label{
-    		display: inline-block;
+    	display: inline-block;
 		border: 3px solid black;
 		border-radius: 5px;
 		margin: 10px 25px;
@@ -406,11 +423,21 @@ table
 		top: 45px;
 		font-size: 20px;
 	}
+	#nav_lan{
+		top: 45px;
+		font-size: 20px;
+        width: 100%;
+		transition: 0.5s;
+        border-width: 0;
+	}
+	#nav_lan a{
+		transition: 0.3s;
+	}
 	.nav_brand{
 		padding-top: 15px;
 	}
 	#nav_label{
-    		display: inline-block;
+    	display: inline-block;
 		border: 3px solid black;
 		border-radius: 5px;
 		margin: 10px 20px;

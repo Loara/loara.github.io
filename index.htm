@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../favicon.ico" size="16x16" type="image/vnd.microsoft.icon">
+
+    <title>Paolo De Donato - Mathematician</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript">'use strict';</script>
+    <script src="js/common.js"></script>
+    <script type="module">
+        import * as defaults from './js/defaults.js';
+        window.cid = defaults.defid;
+        window.cpag = defaults.defpag;
+
+        let sear = new URL(window.location.href).searchParams;
+        if( sear.has("lan") ){
+            let fidx = defaults.languages.indexOf(sear.get("lan"));
+            if( fidx != -1 ){
+                window.cid = fidx;
+            }
+        }
+        if( sear.has("pag") ){
+            let fidx = defaults.pages.indexOf(sear.get("pag"));
+            if( fidx != -1 ){
+                window.cpag = fidx;
+            }
+        }
+        defaults.loadMod();
+        defaults.langn();
+        defaults.naming();
+
+        defaults.selectPage();
+
+
+        window.mainpagem = defaults.mainpage;
+        window.pubpagem = defaults.pubpage;
+        window.respagem = defaults.respage;
+        window.curpagem = defaults.curpage;
+    </script>
+
+
+  </head>
+
+
+
+  <body>
+<div style="flex:1 0 auto;background-color:white">
+    <div id="navigation"><div id="nav_brand_id" class="nav_brand" onclick="lg_toggle()">
+    </div><div class="nav_fill"></div>
+
+<div class="nav_button"><div id="nav_label" onclick="my_toggle()"></div></div>
+
+<div class="nav_menu">
+<a id="hom" class="n-home" href="#" onclick="mainpagem()"></a>
+<a id="cur" class="n-cur" href="#" onclick="curpagem()"></a>
+<a id="pub" class="n-pub" href="#" onclick="pubpagem()"></a>
+<a id="res" class="n-res" href="#" onclick="respagem()"></a></div></div>
+<div id="nav_drop">
+<a id="hom2" class="n-home" href="#" onclick="mainpage2()"></a>
+<a id="cur2" class="n-cur" href="#" onclick="curpage2()"></a>
+<a id="pub2" class="n-pub" href="#" onclick="pubpage2()"></a>
+<a id="res2" class="n-res" href="#" onclick="respage2()"></a></div>
+<div id="nav_lan"></div>
+
+	<div id="headerwrap">
+	<h1 id="mtitle">PAOLO DE DONATO</h1>
+	</div><!-- /headerwrap -->
+	<section id="mbody"></section>
+	<div id="main" class="centered mt mb">
+		<noscript>
+		<div class="no_java">
+			<p>You should enable Javascript language in order to continue navigation.</p>
+			<p>If your browser is outdated or you don't see this website correctly, download the latest version of <a href="https://www.mozilla.org/it/firefox/new/">Mozilla Firefox</a> or <a href="https://www.google.com/intl/it/chrome/">Google Chrome</a>.</p>
+		</div>
+		</noscript>
+	</div><!-- /row -->
+</div><!-- /container -->
+<div id="footerwrap">
+		<a href="#" class="m-cur" onclick="curpagem()"></a>
+		<a href="#" class="m-pub" onclick="pubpagem()"></a>
+		<a href="#" class="m-res" onclick="respagem()"></a>
+	</div>
+  </body>
+</html>
