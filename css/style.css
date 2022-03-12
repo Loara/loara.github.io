@@ -313,9 +313,15 @@ curriculum
 	flex-basis: 0;
 }
 
+.cur_sect{
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+
 .cur_row{
 	display: flex;
-	margin: 10px 0;
+	margin: 15px 0;
 }
 /*
 .cur_row p{
@@ -323,10 +329,12 @@ curriculum
 }*/
 
 .cur_date{
+	display: flex;
 	flex-basis: 0;
 	flex-grow: 1;
 	flex-shrink: 1;
-	text-align: right;
+	justify-content: flex-end;
+	align-items: center;
 	padding: 0 30px;
 }
 

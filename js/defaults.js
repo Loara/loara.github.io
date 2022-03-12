@@ -138,11 +138,12 @@ export function curpage(){
                 <div class=\"cur_ltr\"></div><div class=\"cur_ctr\">";
 
     for(let RR of module["cur"]["records"]){
-        text += "<h2>" + RR.title + "</h2>";
+        text += "<div class=\"cur_sect\"><h2>" + RR.title + "</h2>";
         for(let QQ of RR.value){
-            text += "<div class=\"cur_row\"><div class=\"cur_date\">" + QQ.date + "</div>\
+            text += "<div class=\"cur_row\"><div class=\"cur_date\"><p>" + QQ.date + "</p></div>\
             <div class=\"cur_des\">" + QQ.text + "</div></div>";
         }
+        text += "</div>";
     }
 
     text += "</div><div class=\"cur_ltr\"></div></div>";

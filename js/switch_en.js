@@ -25,7 +25,11 @@ export const dictio = {
 									   "<p>PhD student in Mathematics at University of Rome \"La Sapienza\"</p> <p> Advisor: prof. Emanuele N. Spadaro</p>")
 						]),
 		new CurRecord( "Education",
-					   [ new CurRecordV( "2017-2019",
+					   [ new CurRecordV( "August 9-20, 2021",
+										 "<p>Participation at the 30<sup>th</sup> Jyväskylä Summer School, following these courses:</p> <p><b>Shape Optimization and Free Boundary Problems</b> (held by prof. Dorin Bucur)</p> <p><b>Geometric Evolution Problems</b> (held by prof. Massimiliano Morini)</p><p><b>Differential Calculus on the Wasserstein Space and Mean Field Games</b> (held by prof. Pierre Cardaliaguet)</p>"),
+						new CurRecordV ("July 22 - August 16, 2019",
+									   "<p>Participation at Scuola Matematica Interuniversitaria in Perugia, following these courses:</p> <p><b>Functional Analysis</b> (held by prof. Marius Ghergu, final mark A+)</p> <p><b>Differential Geometry</b> (held by prof. Liviu Ornea, final mark A++).</p>"),
+						new CurRecordV( "2017-2019",
 										 "<p>Master's degree in Mathematics at University of Naples \"Federico II\"</p><p>Thesis: The quantitative isoperimetric inequality</p><p>Advisor: Nicola Fusco</p><p>Graduation mark: 110/110 <i>cum laude</i></p>"),
 						new CurRecordV( "2014-2017",
 										"<p>Bachelor's degree in Mathematics at University of Naples \"Federico II\"</p><p>Thesis: Il teorema di Rouché e applicazioni</p><p>Supervisor: Luigi Greco</p><p>Graduation mark: 110/110 <i>cum laude</i></p>"),
@@ -42,12 +46,6 @@ export const dictio = {
 						new CurRecordV( "May 5-8, 2011",
 										"<p>Participation at Italian National Mathematical Olympiad.</p>")
 						]),
-		new CurRecord( "Events",
-					   [ new CurRecordV( "August 9-20, 2021",
-										 "<p>Participation at the 30<sup>th</sup> Jyväskylä Summer School, following these courses:</p> <p><b>Shape Optimization and Free Boundary Problems</b> (held by prof. Dorin Bucur)</p> <p><b>Geometric Evolution Problems</b> (held by prof. Massimiliano Morini)</p><p><b>Differential Calculus on the Wasserstein Space and Mean Field Games</b> (held by prof. Pierre Cardaliaguet)</p>"),
-					   new CurRecordV ("July 22 - August 16, 2019",
-									   "<p>Participation at Scuola Matematica Interuniversitaria in Perugia, following these courses:</p> <p><b>Functional Analysis</b> (held by prof. Marius Ghergu, final mark A+)</p> <p><b>Differential Geometry</b> (held by prof. Liviu Ornea, final mark A++).</p>")
-					   ]),
 		new CurRecord( "Other activities",
 					   [ new CurRecordV( "November 1, 2018 - September 6, 2019",
 										 "<p>Tutoring activity about \"Analisi 1\" course of first year students in Mathematics at University of Naples \"Federico II\"</p>")
