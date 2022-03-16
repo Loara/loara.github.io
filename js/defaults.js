@@ -35,10 +35,10 @@ export function langn(){
     let len = languages.length;
     for(let i=0; i < len; i++){
         if(i === window.cid){
-            document.getElementById("nav_brand_id").innerHTML = lanname[i];
+            document.getElementById("nav_lan_button").innerHTML = lanname[i];
         }
         else{
-            document.getElementById("nav_lan").innerHTML += "<a href=\"#\" onclick=\"chglan('" + languages[i] + "')\">" + lanname[i] + "</a>";
+            document.getElementById("nav_lan_menu").innerHTML += "<a href=\"#\" onclick=\"chglan('" + languages[i] + "')\">" + lanname[i] + "</a>";
         }
     }
 }
@@ -90,14 +90,14 @@ export function naming(){
 
 export function mainpage(){
 	window.rmall();
-	document.getElementById("main").innerHTML = "<div><img src=\"img/foto.jpg\" class=\"maimage\"></div><div><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">" + module["hom"]["description"] + "</h2><h3 style=\"margin: 0 10%;text-align:right;font-family: \'Indie Flower\';font-style:italic\">" + module["hom"]["author"] + "</h3>";
+	document.getElementById("main").innerHTML = "<div class=\"mainpage\"><img src=\"img/foto.jpg\" class=\"maimage\"><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">" + module["hom"]["description"] + "</h2><div style=\"display: flex; justify-content:flex-end\"><h3 style=\"margin: 0 10%;font-family: \'Indie Flower\';font-style:italic\">" + module["hom"]["author"] + "</h3></div></div></div>";
 	document.getElementById("hom").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Paolo De Donato";
 }
 
 export function pubpage(){
 	window.rmall();
-	document.getElementById("main").innerHTML = "<h2>" + module["pub"]["nothing"] + "</h2>";
+	document.getElementById("main").innerHTML = "<h2 style=\"text-align:center\">" + module["pub"]["nothing"] + "</h2>";
 	document.getElementById("pub").classList.add("active");
 	document.getElementById("mtitle").innerHTML = module["pub"]["mtitle"];
 }
@@ -125,7 +125,7 @@ export function respage(){
     }
 
     text += "</tbody></table>";
-    text += "<p>"+ module["res"]["war"] +"</p></div>";
+    text += "<p style=\"text-align:center\">"+ module["res"]["war"] +"</p></div>";
 
 	document.getElementById("main").innerHTML = text;
 	document.getElementById("res").classList.add("active");

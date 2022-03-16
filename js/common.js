@@ -6,12 +6,12 @@ function rmall(){
 }
 
 function closeMenu(){
-	document.getElementById("nav_drop").style.height = "0px";
+	document.getElementById("nav_pag_menu").style.height = "0px";
 	document.getElementById("nav_label").style.backgroundColor = "#68a1fc";
 }
 
 function closeLMenu(){
-	document.getElementById("nav_lan").style.height = "0px";
+	document.getElementById("nav_lan_menu").style.height = "0px";
 }
 
 function closeAll(){
@@ -19,12 +19,12 @@ function closeAll(){
 	closeLMenu();
 }
 
-function my_toggle(){
-	var trg = document.getElementById("nav_drop");
+function pag_toggle(){
+	var trg = document.getElementById("nav_pag_menu");
 	var dis = window.getComputedStyle(trg).getPropertyValue("height");
     closeLMenu();
 	if(dis === "0px"){
-		trg.style.height = "200px";
+		trg.style.height = "auto";
 		document.getElementById("nav_label").style.backgroundColor = "#2270c9";
 	}
 	else{
@@ -33,12 +33,12 @@ function my_toggle(){
 	}
 }
 
-function lg_toggle(){
-	var trg = document.getElementById("nav_lan");
+function lan_toggle(){
+	var trg = document.getElementById("nav_lan_menu");
 	var dis = window.getComputedStyle(trg).getPropertyValue("height");
     closeMenu();
 	if(dis === "0px"){
-		trg.style.height = "50px";
+		trg.style.height = "auto";
 	}
 	else{
 		trg.style.height = "0px";
@@ -60,32 +60,6 @@ function chglan(lang){
     	pag = "res";
     }
     window.open("index.htm?lan="+lang+"&pag="+pag, "_self");
-}
-
-
- function rmall(){
-	document.getElementById("hom").classList.remove("active");
-	document.getElementById("pub").classList.remove("active");
-	document.getElementById("cur").classList.remove("active");
-	document.getElementById("res").classList.remove("active");
-}
-
- function closeMenu(){
-	document.getElementById("nav_drop").style.height = "0px";
-	document.getElementById("nav_label").style.backgroundColor = "#68a1fc";
-}
-
- function my_toggle(){
-	var trg = document.getElementById("nav_drop");
-	var dis = window.getComputedStyle(trg).getPropertyValue("height");
-	if(dis === "0px"){
-		trg.style.height = "200px";
-		document.getElementById("nav_label").style.backgroundColor = "#2270c9";
-	}
-	else{
-		trg.style.height = "0px";
-		document.getElementById("nav_label").style.backgroundColor = "#68a1fc";
-	}
 }
 
  function mainpage2(){
