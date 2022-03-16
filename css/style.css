@@ -117,6 +117,7 @@ a, a:focus, a:hover {
 
 .bluebak a {
 	display: block;
+	color: white;
 	background-color: transparent;
 	text-align: center;
 }
@@ -201,6 +202,9 @@ nav{
 	font-weight: bold;
 }
 
+/*
+ * Dropdown menu
+ */
 #nav_zero {
 	display: block;
 	position: relative;
@@ -215,6 +219,9 @@ nav{
 	align-items: stretch;
 	font-size: 20px;
 
+	border-top: 1px solid #FAEBD7;
+	border-bottom: 1px solid #FAEBD7;
+
 	position: absolute;
 	min-width: 200px;
 	height: 0;
@@ -222,13 +229,10 @@ nav{
 }
 
 .nav_drop a {
-	display: block;
 	flex-grow: 1;
 	font-weight: 700;
-	text-align: center;
-	background-color: rgba(207, 207, 207, 0.8);
-	color: black;
-	border-bottom: 2px solid black;
+	border-top: 1px solid #FAEBD7;
+	border-bottom: 1px solid #FAEBD7;
 	padding: 20px 25px;
 }
 
@@ -263,20 +267,23 @@ nav{
    ========================================================================== */
 
 footer {
-	padding-top: 50px;
-	padding-bottom: 40px;
+	min-height: 150px;
 	font-weight: bold;
-	text-align: center;
+
 	display: flex;
 	flex-direction: row;
-	flex-shrink: 0;
+	align-items: stretch;
+}
+
+footer div{
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
 }
 
 footer a {
-	flex-grow: 1;
 	font-size: 30px;
-	height: 60px;
-	line-height: 60px;/* lo stesso di height*/
 }
 
 footer a:hover {
@@ -388,12 +395,12 @@ table
 	}
 	#nav_label{
     	display: inline-block;
-		border: 5px solid black;
+		border: 5px solid white;
 		border-radius: 5px;
 		margin: 10px 25px;
 		width: 40px;
 		height: 40px;
-		background-color: #68a1fc;
+		background-color: transparent;
 	}
 }
 
@@ -434,12 +441,12 @@ table
 	}
 	#nav_label{
     	display: inline-block;
-		border: 3px solid black;
+		border: 3px solid white;
 		border-radius: 5px;
 		margin: 10px 20px;
 		width: 25px;
 		height: 25px;
-		background-color: #68a1fc;
+		background-color: transparent;
 	}
 
 	.cur_date{
@@ -459,6 +466,7 @@ table
 		min-height: 140px;
 	}
 	footer{
+		display: flex;
 		flex-direction: column;
 	}
 	footer a{

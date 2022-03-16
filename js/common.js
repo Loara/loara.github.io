@@ -7,7 +7,7 @@ function rmall(){
 
 function closeMenu(){
 	document.getElementById("nav_pag_menu").style.height = "0px";
-	document.getElementById("nav_label").style.backgroundColor = "#68a1fc";
+	document.getElementById("nav_label").style.backgroundColor = "transparent";
 }
 
 function closeLMenu(){
@@ -25,11 +25,11 @@ function pag_toggle(){
     closeLMenu();
 	if(dis === "0px"){
 		trg.style.height = "auto";
-		document.getElementById("nav_label").style.backgroundColor = "#2270c9";
+		document.getElementById("nav_label").style.backgroundColor = "white";
 	}
 	else{
 		trg.style.height = "0px";
-		document.getElementById("nav_label").style.backgroundColor = "#68a1fc";
+		document.getElementById("nav_label").style.backgroundColor = "transparent";
 	}
 }
 
