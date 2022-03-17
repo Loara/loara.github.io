@@ -19,12 +19,13 @@ export const dictio = {
 	cur : {
 		mtitle : "Curriculum",
 		mtitlem : "CURRICULUM",
+		generate : "Converti in LaTeX",
 		records : [
 		new CurRecord( "Posizione attuale",
 						[ new CurRecordV( "2019-ora",
 									   "<p>Studente di dottorato in Matematica presso l'Università di Roma \"La Sapienza\"</p> <p> Relatore: prof. Emanuele N. Spadaro</p>")
 						]),
-		new CurRecord( "Formazione",
+		new CurRecord( "Educazione",
 					   [ new CurRecordV( "9-20 Agosto 2021",
 										 "<p>Partecipazione alla 30<sup>th</sup> Jyväskylä Summer School, frequentando i seguenti corsi:</p> <p><b>Shape Optimization and Free Boundary Problems</b> (tenuto dal prof. Dorin Bucur)</p> <p><b>Geometric Evolution Problems</b> (tenuto dal prof. Massimiliano Morini)</p><p><b>Differential Calculus on the Wasserstein Space and Mean Field Games</b> (tenuto dal prof. Pierre Cardaliaguet)</p>"),
 						new CurRecordV ("22 Luglio - 16 Agosto 2019",

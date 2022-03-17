@@ -19,6 +19,7 @@ export const dictio = {
 	cur : {
 		mtitle : "Curriculum",
 		mtitlem : "CURRICULUM",
+		generate : "Convert to LaTeX",
 		records : [
 		new CurRecord( "Current position",
 						[ new CurRecordV( "2019-now",

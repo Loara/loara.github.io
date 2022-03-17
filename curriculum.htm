@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../favicon.ico" size="16x16" type="image/vnd.microsoft.icon">
+
+    <title>Curriculum</title>
+
+    <script type="text/javascript">'use strict';</script>
+    <script type="module">
+        import * as defaults from './js/defaults.js';
+        window.cid = defaults.defid;
+        window.cpag = defaults.defpag;
+
+        let sear = new URL(window.location.href).searchParams;
+        if( sear.has("lan") ){
+            let fidx = defaults.languages.indexOf(sear.get("lan"));
+            if( fidx != -1 ){
+                window.cid = fidx;
+            }
+        }
+        if( sear.has("pag") ){
+            let fidx = defaults.pages.indexOf(sear.get("pag"));
+            if( fidx != -1 ){
+                window.cpag = fidx;
+            }
+        }
+        defaults.loadMod();
+        defaults.generateCur();
+    </script>
+
+    </head>
+<body>
+
+</body>
+
+</html>

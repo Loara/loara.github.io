@@ -134,7 +134,9 @@ export function respage(){
 
 export function curpage(){
 	window.rmall();
-    let text = "<div class =\"cur_cont\">\
+    let text = "<div class=\"cur\">\
+             <a style=\"text-align:center;color:blue\" href=\"curriculum.htm?lan=" + languages[window.cid] + "\" target=\"_blank\">" + module["cur"]["generate"] + "</a>\
+                <div class =\"cur_cont\">\
                 <div class=\"cur_ltr\"></div><div class=\"cur_ctr\">";
 
     for(let RR of module["cur"]["records"]){
@@ -146,11 +148,35 @@ export function curpage(){
         text += "</div>";
     }
 
-    text += "</div><div class=\"cur_ltr\"></div></div>";
+    text += "</div><div class=\"cur_ltr\"></div></div>\
+             </div>";
 
 	document.getElementById("main").innerHTML = text;
 	document.getElementById("cur").classList.add("active");
 	document.getElementById("mtitle").innerHTML = module["cur"]["mtitle"];
+}
+
+const tag=/<.*?>/g; //Not greedy (?) and global (g)
+const bol=/<b>.*?<\/b>/g;
+const ita=/<i>.*?<\/i>/g;
+
+function remTag(str){
+    let tmp = str.replaceAll(ita, "\\textit{$&}");
+    tmp = tmp.replaceAll(bol, "\\textbf{$&}");
+    return tmp.replaceAll(tag, " ");
+}
+
+export function generateCur(){
+    let text = "";
+    for(let RR of module["cur"]["records"]){
+        text += "\\section{" + RR.title + "}<br><br>";
+        text += "&nbsp \\begin{description}<br><br>";
+        for(let QQ of RR.value){
+            text += "&nbsp &nbsp \\item[" + QQ.date + "] " + remTag(QQ.text) + "<br><br>";
+        }
+        text += "&nbsp\\end{description}<br><br>";
+    }
+    document.body.innerHTML = text;
 }
 
 
