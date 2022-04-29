@@ -29,3 +29,12 @@ export class CurRecord {
 		this.value = v;
 	}
 }
+
+export class LinRecord {
+	name;
+	url;
+	constructor(n, u){
+		this.name = n;
+		this.url = u;
+	}
+}
