@@ -85,6 +85,11 @@ export const dictio = {
 							"assets/res/Fibonacci.pdf" )
 		]
 
+	},
+	
+	lin : {
+		mtitle : "Links",
+		mtitlem : "LINKS"
 	}
 };
 
