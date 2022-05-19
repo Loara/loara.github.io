@@ -417,7 +417,7 @@ table links
 }
 
 .llink {
-	color: blue;
+	color: #00BFFF;
 }
 
 @media only screen and (max-width: 840px){/* attiva menu */
