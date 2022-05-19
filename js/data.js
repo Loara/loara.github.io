@@ -33,8 +33,10 @@ export class CurRecord {
 export class LinRecord {
 	name;
 	url;
+	urlname;
 	constructor(n, u){
 		this.name = n;
 		this.url = u;
+		this.urlname = u;
 	}
 }
