@@ -59,6 +59,9 @@ function chglan(lang){
     else if(document.getElementById("res").classList.contains("active")){
     	pag = "res";
     }
+    else if(document.getElementById("lin").classList.contains("active")){
+    	pag = "lin";
+    }
     window.open("index.htm?lan="+lang+"&pag="+pag, "_self");
 }
 
@@ -84,6 +87,12 @@ function chglan(lang){
 	closeMenu();
 	closeLMenu();
 	respagem();
+}
+
+function linpage2(){
+	closeMenu();
+	closeLMenu();
+	linpagem();
 }
 
 
