@@ -151,7 +151,7 @@ export function linpage(){
 
     for(let RR of module["lin"]["LIN"]){
         text += "<tr>\
-				<td><a href=\"" + RR.url + "\">" + RR.name + "</a></td>\
+				<td>" + RR.name + "</td><td><a href=\"" + RR.url + "\">" + RR.urlname + "</a></td>\
 				</tr>";
     }
 
