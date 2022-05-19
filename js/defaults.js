@@ -146,12 +146,12 @@ export function respage(){
 
 export function linpage(){
 	window.rmall();
-    let text = "<div class =\"container\"><table class=\"table table-hover\">\
+    let text = "<div class =\"lcont\"><table class=\"ltable\">\
 			<tbody>";
 
     for(let RR of module["lin"]["LIN"]){
         text += "<tr>\
-				<td>" + RR.name + "</td><td><a href=\"" + RR.url + "\">" + RR.urlname + "</a></td>\
+				<td>" + RR.name + "</td><td class=\"llink\"><a href=\"" + RR.url + "\">" + RR.urlname + "</a></td>\
 				</tr>";
     }
 
