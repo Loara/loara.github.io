@@ -70,10 +70,10 @@ export function naming(){
     for(let elem of ress){
         elem.innerHTML = module["res"]["mtitle"];
     }
-    let lins = document.getElementsByClassName('n-lin');
+    /* let lins = document.getElementsByClassName('n-lin');
     for(let elem of ress){
         elem.innerHTML = module["lin"]["mtitle"];
-    }
+    }*/
 
     homs = document.getElementsByClassName('m-home');
     for(let elem of homs){
