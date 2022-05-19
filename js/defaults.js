@@ -71,10 +71,9 @@ export function naming(){
         elem.innerHTML = module["res"]["mtitle"];
     }
     let lins = document.getElementsByClassName('n-lin');
-    /* 
-    for(let elem of ress){
+    for(let elem of lins){
         elem.innerHTML = module["lin"]["mtitle"];
-    }*/
+    }
 
     homs = document.getElementsByClassName('m-home');
     for(let elem of homs){
@@ -93,7 +92,7 @@ export function naming(){
         elem.innerHTML = module["res"]["mtitlem"];
     }
     lins = document.getElementsByClassName('m-lin');
-    for(let elem of ress){
+    for(let elem of lins){
         elem.innerHTML = module["lin"]["mtitlem"];
     }
 }
