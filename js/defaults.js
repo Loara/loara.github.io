@@ -2,7 +2,7 @@
 import { dictio as dictioEN } from './switch_en.js';
 import { dictio as dictioIT } from './switch_it.js';
 
-export const pages = ['hom', 'pub', 'cur', 'res'];
+export const pages = ['hom', 'pub', 'cur', 'res', 'lin'];
 export const defpag = 0;
 
 export const languages = [ 'it', 'en'];
@@ -67,6 +67,10 @@ export function naming(){
     for(let elem of ress){
         elem.innerHTML = module["res"]["mtitle"];
     }
+    let lins = document.getElementsByClassName('n-lin');
+    for(let elem of ress){
+        elem.innerHTML = module["lin"]["mtitle"];
+    }
 
     homs = document.getElementsByClassName('m-home');
     for(let elem of homs){
@@ -83,6 +87,10 @@ export function naming(){
     ress = document.getElementsByClassName('m-res');
     for(let elem of ress){
         elem.innerHTML = module["res"]["mtitlem"];
+    }
+    lins = document.getElementsByClassName('m-lin');
+    for(let elem of ress){
+        elem.innerHTML = module["lin"]["mtitlem"];
     }
 }
 
@@ -130,6 +138,26 @@ export function respage(){
 	document.getElementById("main").innerHTML = text;
 	document.getElementById("res").classList.add("active");
 	document.getElementById("mtitle").innerHTML = module["res"]["mtitle"];
+}
+
+
+export function linpage(){
+	window.rmall();
+    let text = "<div class =\"container\"><table class=\"table table-hover\">\
+			<tbody>";
+
+    for(let RR of module["lin"]["LIN"]){
+        text += "<tr>\
+				<td><a href=\"" + RR.url + "\">" + RR.name + "</a></td>\
+				</tr>";
+    }
+
+    text += "</tbody></table>";
+    text += "</div>";
+
+	document.getElementById("main").innerHTML = text;
+	document.getElementById("lin").classList.add("active");
+	document.getElementById("mtitle").innerHTML = module["lin"]["mtitle"];
 }
 
 export function curpage(){
