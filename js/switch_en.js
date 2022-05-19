@@ -1,5 +1,5 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord } from './data.js';
+import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos } from './data.js';
 
 export const dictio = {
 
@@ -92,8 +92,9 @@ export const dictio = {
 		mtitlem : "LINKS",
 		
 		LIN : [
-			new LinRecord ("Institutional page",
-				       "https://phd.uniroma1.it/web/PAOLO-DE-DONATO_nP1895870_IT.aspx"),
+			LinCos ("Institutional page",
+				       "https://phd.uniroma1.it/web/PAOLO-DE-DONATO_nP1895870_IT.aspx",
+			       		"https://phd.uniroma1.it/web/PAOLO-DE..."),
 			new LinRecord ("GitHub page",
 				       "https://github.com/Loara"),
 			new LinRecord ("ORCID",
