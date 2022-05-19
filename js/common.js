@@ -3,6 +3,7 @@ function rmall(){
 	document.getElementById("pub").classList.remove("active");
 	document.getElementById("cur").classList.remove("active");
 	document.getElementById("res").classList.remove("active");
+	document.getElementById("lin").classList.remove("active");
 }
 
 function closeMenu(){
@@ -94,11 +95,6 @@ function linpage2(){
 	closeLMenu();
 	linpagem();
 }
-
-
-
-
-
 
 
 
