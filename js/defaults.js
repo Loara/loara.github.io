@@ -26,6 +26,9 @@ export function selectPage() {
         case 3:
             respage();
             break;
+        case 4:
+            linpage();
+            break;
         default:
             console.log(window.cpag);
     }
