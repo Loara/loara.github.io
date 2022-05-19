@@ -40,3 +40,9 @@ export class LinRecord {
 		this.urlname = u;
 	}
 }
+
+export function LinCos(n, u, un){
+	let ret = new LinRecord(n, u);
+	ret.urlname = un;
+	return ret;
+}
