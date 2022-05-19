@@ -92,8 +92,9 @@ export const dictio = {
 		mtitlem : "LINKS",
 		
 		LIN : [
-			new LinRecord ("Pagina istituzionale",
-				       "https://phd.uniroma1.it/web/PAOLO-DE-DONATO_nP1895870_IT.aspx"),
+			LinCos ("Pagina istituzionale",
+				       "https://phd.uniroma1.it/web/PAOLO-DE-DONATO_nP1895870_IT.aspx",
+			       		"https://phd.uniroma1.it/web/PAOLO-DE..."),
 			new LinRecord ("GitHub",
 				       "https://github.com/Loara"),
 			new LinRecord ("ORCID",
