@@ -1,5 +1,5 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord } from './data.js';
+import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos } from './data.js';
 
 export const dictio = {
 
