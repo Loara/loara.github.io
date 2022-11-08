@@ -23,33 +23,105 @@ export const dictio = {
 		records : [
 		new CurRecord( "Posizione attuale",
 						[ new CurRecordV( "2019-ora",
-									   "<p>Studente di dottorato in Matematica presso l'Università di Roma \"La Sapienza\"</p> <p> Relatore: prof. Emanuele N. Spadaro</p>")
+										[
+											"Studente di dottorato in Matematica presso l'Università di Roma \"La Sapienza\"",
+											"Relatore: prof. Emanuele N. Spadaro"
+										]
+									)
 						]),
-		new CurRecord( "Educazione",
+		new CurRecord( "Formazione",
 					   [ new CurRecordV( "9-20 Agosto 2021",
-										 "<p>Partecipazione alla 30<sup>th</sup> Jyväskylä Summer School, frequentando i seguenti corsi:</p> <p><b>Shape Optimization and Free Boundary Problems</b> (tenuto dal prof. Dorin Bucur)</p> <p><b>Geometric Evolution Problems</b> (tenuto dal prof. Massimiliano Morini)</p><p><b>Differential Calculus on the Wasserstein Space and Mean Field Games</b> (tenuto dal prof. Pierre Cardaliaguet)</p>"),
+										 [
+											[
+												"Partecipazione alla",
+												{
+													"val" : "30",
+													"sup" : "th"
+												},
+												"Jyväskylä Summer School, frequentando i seguenti corsi:"
+											],
+											{
+												"elenco" : [
+												[
+													{
+														"emph" : "Shape Optimization and Free Boundary Problems"
+													},
+													"(tenuto dal prof. Dorin Bucur)",
+												],
+												[
+													{
+														"emph" : "Geometric Evolution Problems"
+													},
+													"(tenuto dal prof. Massimiliano Morini)"
+												],
+												[
+													{
+														"emph" : "Differential Calculus on the Wasserstein Space and Mean Field Games"
+													},
+													"(tenuto dal prof. Pierre Cardaliaguet)"
+												]
+												]
+											}
+										]),
 						new CurRecordV ("22 Luglio - 16 Agosto 2019",
-									   "<p>Partecipazione alla Scuola Matematica Interuniversitaria a Perugia, frequentando i seguenti corsi:</p> <p><b>Functional Analysis</b> (tenuto dal prof. Marius Ghergu, voto finale A+)</p> <p><b>Differential Geometry</b> (tenuto dal prof. Liviu Ornea, voto finale A++).</p>"),
+										[
+											"Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, seguendo i seguenti corsi:",
+											{
+												"elenco" : [
+													[
+														{
+															"emph" : "Functional Analysis"
+														},
+														"(tenuto dal prof. Marius Ghergu, voto finale A+)"
+													],
+													[
+														{
+															"emph" : "Differential Geometry"
+														},
+														"(tenuto dal prof. Liviu Ornea, voto finale A++)"
+													]
+												]
+											}
+										]
+									),
 						new CurRecordV( "2017-2019",
-										 "<p>Laurea Magistrale in Matematica presso l'Università di Napoli \"Federico II\"</p><p>Tesi: The quantitative isoperimetric inequality</p><p>Relatore: Nicola Fusco</p><p>Voto di laurea: 110/110 <i>cum laude</i></p>"),
+										{
+											"slim":
+										 [
+											"Laurea magistrale in Matematica presso l'Università di Napoli \"Federico II\"",
+											"Tesi: The quantitative isoperimetric inequality",
+											"Relatore: prof. Nicola Fusco",
+											"Voto finale: 110/110 cum laude"
+										]
+										}
+									),
 						new CurRecordV( "2014-2017",
-										"<p>Laurea Triennale in Matematica presso l'Università di Napoli \"Federico II\"</p><p>Tesi: Il teorema di Rouché e applicazioni</p><p>Relatore: Luigi Greco</p><p>Voto di laurea: 110/110 <i>cum laude</i></p>"),
+										{
+											"slim" :
+										[
+											"Laurea triennale in Matematica presso l'Università di Napoli \"Federico II\"",
+											"Tesi: Il teorema di Rouché e applicazioni",
+											"Relatore: Luigi Greco",
+											"Voto finale: 110/110 cum laude"
+										]
+										}
+									),
 						new CurRecordV( "2009-2014",
-										"<p>Liceo scientifico.</p>")
+										"Scuola superiore.")
 						]),
 		new CurRecord( "Premi e riconoscimenti",
 					   [ new CurRecordV( "10 Giugno 2016",
-										 "<p>Premio \"Buon compleanno Federico II\" per l'eccellenza del <i>cursus studiorum</i>.</p>"),
+										 "Ppremio \"Buon compleanno Federico II\" per l'eccellenza del cursus studiorum"),
 						new CurRecordV( "8-11 Maggio 2014",
-										"<p>Medaglia d'Argento alla fase nazionale delle Olimpiadi della Matematica.</p>"),
+										"Medaglia d'argento alla fase nazionale delle Olimpiadi della Matematica"),
 						new CurRecordV( "9-12 Maggio 2013",
-										"<p>Medaglia di Bronzo alla fase nazionale delle Olimpiadi della Matematica.</p>"),
+										"Medaglia di bronzo alla fase nazionale delle Olimpiadi della Matematica"),
 						new CurRecordV( "5-8 Maggio 2011",
-										"<p>Ammissione alla fase nazionale delle Olimpiadi della Matematica.</p>")
+										"Partecipazione alla fase nazionale delle Olimpiadi della Matematica")
 						]),
 		new CurRecord( "Altre attività",
 					   [ new CurRecordV( "1 Novembre 2018 - 6 Settembre 2019",
-										 "<p>Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\"</p>")
+										 "Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\"")
 					   ])
 		]
 	},

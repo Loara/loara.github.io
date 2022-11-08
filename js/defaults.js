@@ -1,6 +1,7 @@
 
 import { dictio as dictioEN } from './switch_en.js';
 import { dictio as dictioIT } from './switch_it.js';
+import {formattaHTML, formattaLaTeX} from './data.js';
 
 export const pages = ['hom', 'pub', 'cur', 'res', 'lin'];
 export const defpag = 0;
@@ -174,7 +175,7 @@ export function curpage(){
         text += "<div class=\"cur_sect\"><h2>" + RR.title + "</h2>";
         for(let QQ of RR.value){
             text += "<div class=\"cur_row\"><div class=\"cur_date\"><p>" + QQ.date + "</p></div>\
-            <div class=\"cur_des\">" + QQ.text + "</div></div>";
+            <div class=\"cur_des\">" + formattaHTML(true, QQ.text) + "</div></div>";
         }
         text += "</div>";
     }
@@ -191,22 +192,22 @@ const tag=/<.*?>/g; //Not greedy (?) and global (g)
 const bol=/<b>.*?<\/b>/g;
 const ita=/<i>.*?<\/i>/g;
 
-function remTag(str){
-    let tmp = str.replaceAll(ita, "\\textit{$&}");
-    tmp = tmp.replaceAll(bol, "\\textbf{$&}");
-    return tmp.replaceAll(tag, " ");
-}
-
 export function generateCur(){
-    let text = "";
+    let text = "\\documentclass[a4paper]{article}<br><br>\
+            \\title{Paolo De Donato}<br>\
+            \\author{Curriculum vitae}<br><br>\
+            %Compile with XeLaTeX or LuaLaTeX<br><br>\
+            \\begin{document}<br>\
+            \\maketitle<br>";
     for(let RR of module["cur"]["records"]){
         text += "\\section{" + RR.title + "}<br><br>";
         text += "&nbsp \\begin{description}<br><br>";
         for(let QQ of RR.value){
-            text += "&nbsp &nbsp \\item[" + QQ.date + "] " + remTag(QQ.text) + "<br><br>";
+            text += "&nbsp &nbsp \\item[" + QQ.date + "] " + formattaLaTeX(false, QQ.text) + "<br><br>";
         }
         text += "&nbsp\\end{description}<br><br>";
     }
+    text += "\\end{document}";
     document.body.innerHTML = text;
 }
 
