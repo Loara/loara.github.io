@@ -1,7 +1,7 @@
 
-import { dictio as dictioEN } from './switch_en.js';
-import { dictio as dictioIT } from './switch_it.js';
-import {formattaHTML, formattaLaTeX} from './data.js';
+import { dictio as dictioEN } from '/js/switch_en.js';
+import { dictio as dictioIT } from '/js/switch_it.js';
+import {formattaHTML, formattaLaTeX} from '/js/data.js';
 
 export const pages = ['hom', 'pub', 'cur', 'res', 'lin'];
 export const defpag = 0;
@@ -144,6 +144,13 @@ export function respage(){
 	document.getElementById("mtitle").innerHTML = module["res"]["mtitle"];
 }
 
+function get_logo(name){
+	if(name == "")
+		return "";
+	else{
+		return "<img src=\"/img/" + name + "\" class=\"logo\" />";
+	}
+}
 
 export function linpage(){
 	window.rmall();
@@ -152,7 +159,7 @@ export function linpage(){
 
     for(let RR of module["lin"]["LIN"]){
         text += "<tr>\
-				<td>" + RR.name + "</td><td class=\"llink\"><a href=\"" + RR.url + "\">" + RR.urlname + "</a></td>\
+				<td>" + get_logo(RR.logoname) + RR.name + "</td><td class=\"llink\"><a href=\"" + RR.url + "\">" + RR.urlname + "</a></td>\
 				</tr>";
     }
 

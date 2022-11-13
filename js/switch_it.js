@@ -1,5 +1,5 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos } from './data.js';
+import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo } from '/js/data.js';
 
 export const dictio = {
 
@@ -167,10 +167,12 @@ export const dictio = {
 			LinCos ("Pagina istituzionale",
 				       "https://phd.uniroma1.it/web/PAOLO-DE-DONATO_nP1895870_IT.aspx",
 			       		"https://phd.uniroma1.it/web/PAOLO-DE..."),
-			new LinRecord ("GitHub",
-				       "https://github.com/Loara"),
-			new LinRecord ("ORCID",
-					"https://orcid.org/0000-0002-6280-3349")
+			Lin_Logo ("Pagina GitHub",
+				       "https://github.com/Loara",
+					   "GitHub-Mark-120px-plus.png"),
+			Lin_Logo ("ORCID iD",
+					"https://orcid.org/0000-0002-6280-3349",
+					"ORCID-iD_icon-vector.svg")
 		]
 	}
 };
