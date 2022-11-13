@@ -420,6 +420,13 @@ table links
 	color: #00BFFF;
 }
 
+.logo {
+	display: inline flow; //equivalente ad inline
+	width: 24px;
+	height: 24px;
+	margin: 0 6px;
+}
+
 @media only screen and (max-width: 840px){/* attiva menu */
 	.nav_button{
 		display: block;
@@ -512,5 +519,11 @@ table links
 	}
 	footer a{
 		font-size: 20px;
+	}
+	
+	.logo{
+		width: 16px;
+		height: 16px;
+		margin: 0 4px;
 	}
 }
