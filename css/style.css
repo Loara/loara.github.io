@@ -36,6 +36,10 @@
 	border: 0;
 }
 
+.email {
+	display: none;
+}
+
 /*
  * A better looking default horizontal rule
  */

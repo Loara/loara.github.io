@@ -96,6 +96,20 @@ function linpage2(){
 	linpagem();
 }
 
+const eto = "pron94@gmail.com";
+
+function get_email() {
+	return "<span class=\"email\">" + eto +  "</span>";
+}
+
+function collap(){
+	let ret = "";
+	ret += "dedo.paolo" + ".2";
+	ret += eto.substring(5,7);
+	ret += eto.substring(0, 3);
+	ret += "t" + eto.substring(2,4) + ".me";
+	window.alert(ret);
+}
 
 
  function curpageT(){

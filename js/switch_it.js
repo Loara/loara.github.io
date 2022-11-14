@@ -174,6 +174,17 @@ export const dictio = {
 					"https://orcid.org/0000-0002-6280-3349",
 					"ORCID-iD_icon-vector.svg")
 		]
+	},
+	
+	ema : {
+		tit : "Email",
+		war : [
+			{
+				emph : "Attenzione"
+			},
+			"Solo le email contenenti testo semplice verranno accettate. Per evitare che i suoi messaggi vengano automaticamente cestinati si assicuri di usa text/plain come MIME type per le  sue email."
+		],
+		cli :  "Clicca qui per ottenere l'indirizzo"
 	}
 };
 

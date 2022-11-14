@@ -12,6 +12,10 @@ export const defid = 1;
 
 export let module;
 
+function get_email() {
+	return "<span class=\"email\">pron94@gmail.com</span>";
+}
+
 
 export function selectPage() {
     switch( window.cpag ){
@@ -164,6 +168,8 @@ export function linpage(){
     }
 
     text += "</tbody></table>";
+	text += "<h2>" + module["ema"]["tit"] + "</h2>";
+	text += "<div style=\"margin: 20px\">" + get_email() + formattaHTML(false, module["ema"]["war"]) + " <a href=\"#\" onClick=\"collap(); return false;\" class=\"llink\">" + module["ema"]["cli"] + "</a></div>";
     text += "</div>";
 
 	document.getElementById("main").innerHTML = text;
