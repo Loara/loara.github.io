@@ -111,7 +111,7 @@ function collap(){
 	window.alert(ret);
 }
 
-
+/*
  function curpageT(){
 	rmall();
 	document.getElementById("main").innerHTML = "<div class=\"cur_cont\"><div class=\"cur_ltr\"></div><div class=\"cur_ctr\">\
@@ -137,3 +137,5 @@ function collap(){
 	document.getElementById("cur").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Curriculum";
 }
+
+*/
