@@ -1,5 +1,5 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo } from '/js/data.js';
+import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.js';
 
 export const dictio = {
 
@@ -191,7 +191,11 @@ export const dictio = {
         "GitHub-Mark-120px-plus.png"),
       Lin_Logo ("ORCID iD",
         "https://orcid.org/0000-0002-6280-3349",
-        "ORCID-iD_icon-vector.svg")
+        "ORCID-iD_icon-vector.svg"),
+      LinCos_Logo ("Baduk Club",
+        "https://baduk.club/profile/1689092500874x366725001519756740",
+        "https://baduk.club/profile/...",
+        "baduk.png")
     ]
   },
 
