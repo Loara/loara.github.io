@@ -1,7 +1,7 @@
 
 import { dictio as dictioEN } from '/js/switch_en.js';
 import { dictio as dictioIT } from '/js/switch_it.js';
-import {formattaHTML, formattaLaTeX} from '/js/data.js';
+import {formatHTM, formatTex} from '/js/format.js';
 
 export const pages = ['hom', 'pub', 'cur', 'res', 'lin'];
 export const defpag = 0;
@@ -169,7 +169,7 @@ export function linpage(){
 
     text += "</tbody></table>";
 	text += "<h2>" + module["ema"]["tit"] + "</h2>";
-	text += "<div style=\"margin: 20px\">" + get_email() + formattaHTML(false, module["ema"]["war"]) + " <a href=\"#\" onClick=\"collap(); return false;\" class=\"llink\">" + module["ema"]["cli"] + "</a></div>";
+	text += "<div style=\"margin: 20px\">" + get_email() + formatHTM(module["ema"]["war"]) + " <a href=\"#\" onClick=\"collap(); return false;\" class=\"llink\">" + module["ema"]["cli"] + "</a></div>";
     text += "</div>";
 
 	document.getElementById("main").innerHTML = text;
@@ -188,7 +188,7 @@ export function curpage(){
         text += "<div class=\"cur_sect\"><h2>" + RR.title + "</h2>";
         for(let QQ of RR.value){
             text += "<div class=\"cur_row\"><div class=\"cur_date\"><p>" + QQ.date + "</p></div>\
-            <div class=\"cur_des\">" + formattaHTML(true, QQ.text) + "</div></div>";
+            <div class=\"cur_des\">" + formatHTM(QQ.text) + "</div></div>";
         }
         text += "</div>";
     }
@@ -216,7 +216,7 @@ export function generateCur(){
         text += "\\section{" + RR.title + "}<br><br>";
         text += "&nbsp \\begin{description}<br><br>";
         for(let QQ of RR.value){
-            text += "&nbsp &nbsp \\item[" + QQ.date + "] " + formattaLaTeX(false, QQ.text) + "<br><br>";
+            text += "&nbsp &nbsp \\item[" + QQ.date + "] " + formatTex(QQ.text) + "<br><br>";
         }
         text += "&nbsp\\end{description}<br><br>";
     }

@@ -1,5 +1,6 @@
 
 import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.js';
+import {Elenco, Slim, Sup, Emph} from './format.js'
 
 export const dictio = {
 
@@ -22,126 +23,106 @@ export const dictio = {
     generate : "Converti in LaTeX",
     records : [
       new CurRecord( "Posizione attuale",
-        [ new CurRecordV( "1 Giugno 2023 - ora",
-          {
-            "slim":
+        [ new CurRecordV( "1 giugno 2023 - ora",
+          new Slim(
             [
               "Assegno di ricerca in Matematica all'Università di Padova",
               "Referenti: prof. Davide Vittone e prof. Annalisa Massaccesi",
               "Titolo: Alcune questioni di Teoria Geometrica della Misura"
             ]
-          }
+          )
         )]),
       new CurRecord( "Formazione",
-        [ new CurRecordV( "1 Novembre 2022 - 31 Maggio 2023",
-          {
-            "slim":
+        [ new CurRecordV( "1 novembre 2022 - 31 maggio 2023",
+          new Slim(
             [
               "Assegno di ricerca in Matematica all'Università di Roma \"La Sapienza\"",
               "Referente: prof. Emanuele N. Spadaro",
               "Titolo: Superfici minime e problemi a frontiera libera: studio delle singolarità di codimensione maggiore di uno"
             ]
-          }),
-          new CurRecordV( "1 Novembre 2019-29 Maggio 2023",
-          {
-            "slim":
+          )),
+          new CurRecordV( "1 novembre 2019-29 maggio 2023",
+          new Slim(
             [
               "Dottorato in Matematica all'Università di Roma \"La Sapienza\"",
               "Relatore: prof. Emanuele N. Spadaro",
               "Tesi: Rectifiability of stationary varifolds branching set with multiplicity at most 2"
             ]
-          }),
-          new CurRecordV( "9-20 Agosto 2021",
+          )),
+          new CurRecordV( "9-20 agosto 2021",
           [
-            [
-              "Partecipazione alla",
-              {
-                "val" : "30",
-                "sup" : "th"
-              },
-              "Jyväskylä Summer School, frequentando i seguenti corsi:"
-            ],
-            {
-              "elenco" : [
+            "Partecipazione alla ",
+            new Sup("30", "th"),
+            " Jyväskylä Summer School, frequentando i seguenti corsi: ",
+            new Elenco(
+              [
                 [
-                  {
-                    "emph" : "Shape Optimization and Free Boundary Problems"
-                  },
-                  "(tenuto dal prof. Dorin Bucur)",
+                  new Emph("Shape Optimization and Free Boundary Problems"),
+                  " (tenuto dal prof. Dorin Bucur)"
                 ],
                 [
-                  {
-                    "emph" : "Geometric Evolution Problems"
-                  },
-                  "(tenuto dal prof. Massimiliano Morini)"
+                  new Emph("Geometric Evolution Problems"),
+                  " (tenuto dal prof. Massimiliano Morini)"
                 ],
                 [
-                  {
-                    "emph" : "Differential Calculus on the Wasserstein Space and Mean Field Games"
-                  },
-                  "(tenuto dal prof. Pierre Cardaliaguet)"
+                  new Emph("Differential Calculus on the Wasserstein Space and Mean Field Games"),
+                  " (tenuto dal prof. Pierre Cardaliaguet)"
                 ]
               ]
-            }
+            )
           ]),
-          new CurRecordV ("22 Luglio - 16 Agosto 2019",
+          new CurRecordV ("22 luglio - 16 agosto 2019",
             [
-              "Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, seguendo i seguenti corsi:",
-              {
-                "elenco" : [
+              "Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, seguendo i seguenti corsi: ",
+              new Elenco(
+                [
                   [
-                    {
-                      "emph" : "Functional Analysis"
-                    },
-                    "(tenuto dal prof. Marius Ghergu, voto finale A+)"
+                    new Emph("Functional Analysis"),
+                    " (tenuto dal prof. Marius Ghergu, voto finale A+)"
                   ],
                   [
-                    {
-                      "emph" : "Differential Geometry"
-                    },
-                    "(tenuto dal prof. Liviu Ornea, voto finale A++)"
+                    new Emph("Differential Geometry"),
+                    " (tenuto dal prof. Liviu Ornea, voto finale A++)"
                   ]
                 ]
-              }
+              )
             ]
           ),
           new CurRecordV( "2017-2019",
-            {
-              "slim":
+            new Slim(
               [
                 "Laurea magistrale in Matematica presso l'Università di Napoli \"Federico II\"",
                 "Tesi: The quantitative isoperimetric inequality",
                 "Relatore: prof. Nicola Fusco",
                 "Voto finale: 110/110 cum laude"
               ]
-            }
+            )
           ),
           new CurRecordV( "2014-2017",
-            {
-              "slim" :
+            new Slim(
               [
                 "Laurea triennale in Matematica presso l'Università di Napoli \"Federico II\"",
                 "Tesi: Il teorema di Rouché e applicazioni",
                 "Relatore: Luigi Greco",
                 "Voto finale: 110/110 cum laude"
               ]
-            }
+            )
           ),
           new CurRecordV( "2009-2014",
             "Scuola superiore.")
         ]),
       new CurRecord( "Premi e riconoscimenti",
-        [ new CurRecordV( "10 Giugno 2016",
+        [ new CurRecordV( "10 giugno 2016",
           "Premio \"Buon compleanno Federico II\" per l'eccellenza del cursus studiorum"),
-          new CurRecordV( "8-11 Maggio 2014",
+          new CurRecordV( "8-11 maggio 2014",
             "Medaglia d'argento alla fase nazionale delle Olimpiadi della Matematica"),
-          new CurRecordV( "9-12 Maggio 2013",
+          new CurRecordV( "9-12 maggio 2013",
             "Medaglia di bronzo alla fase nazionale delle Olimpiadi della Matematica"),
-          new CurRecordV( "5-8 Maggio 2011",
+          new CurRecordV( "5-8 maggio 2011",
             "Partecipazione alla fase nazionale delle Olimpiadi della Matematica")
         ]),
       new CurRecord( "Altre attività",
-        [ new CurRecordV( "1 Novembre 2018 - 6 Settembre 2019",
+        [ new CurRecordV( "1 novembre 2018 - 6 settembre 2019",
           "Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\"")
         ])
     ]
@@ -202,10 +183,8 @@ export const dictio = {
   ema : {
     tit : "Email",
     war : [
-      {
-        emph : "Attenzione"
-      },
-      "Solo le email contenenti testo semplice verranno accettate. Per evitare che i suoi messaggi vengano automaticamente cestinati si assicuri di usa text/plain come MIME type per le  sue email."
+      new Emph("Attenzione:"),
+      " Solo le email contenenti testo semplice verranno accettate. Per evitare che i suoi messaggi vengano automaticamente cestinati si assicuri di usa text/plain come MIME type per le  sue email."
     ],
     cli :  "Clicca qui per ottenere l'indirizzo"
   }
