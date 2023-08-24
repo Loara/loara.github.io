@@ -141,7 +141,6 @@ export function respage(){
     }
 
     text += "</tbody></table>";
-    text += "<p style=\"text-align:center\">"+ module["res"]["war"] +"</p></div>";
 
 	document.getElementById("main").innerHTML = text;
 	document.getElementById("res").classList.add("active");

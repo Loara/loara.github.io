@@ -100,6 +100,20 @@ export class Emph{
   }
 }
 
+export class Cors{
+  constructor(va){
+    this.va = va;
+  }
+
+  fH(){
+    return "<i>" + formatHTM(this.va) + "</i>";
+  }
+
+  fT(){
+    return "\\textit{" + formatTex(this.va) + "}";
+  }
+}
+
 export class Sup{
   constructor(b, s){
     this.b = b;

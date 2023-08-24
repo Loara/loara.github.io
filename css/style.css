@@ -310,14 +310,14 @@ curriculum
 }
 
 .cur_ltr{
-	flex-grow: 1;
+	flex-grow: 2;
 	flex-basis: 0;
 }
 
 .cur_ctr{
 	display: flex;
 	flex-direction: column;
-	flex-grow: 5;
+	flex-grow: 10;
 	flex-basis: 0;
 }
 
@@ -431,14 +431,17 @@ table links
 	margin: 0 6px;
 }
 
-@media only screen and (max-width: 840px){/* attiva menu */
+@media only screen and (max-width: 980px){/* attiva menu */
 	.nav_button{
 		display: block;
 		background-color: transparent;
 		text-align: center;
 		vertical-align: middle;
 	}
-	
+	.cur_ltr{
+		flex-grow: 1;
+		flex-basis: 0;
+	}
 	.nav_menu{
 		display: none;
 	}
@@ -456,7 +459,7 @@ table links
 	}
 }
 
-@media only screen and (max-width: 748px){
+@media only screen and (max-width: 830px){
 	html, body{
 		font-size: 13px;
 	}

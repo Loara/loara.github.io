@@ -11,7 +11,7 @@ export class ResRecord {
 		this.link = h;
 	}
 }
-
+/*
 export class CurRecordV {
 	date;
 	text;
@@ -29,6 +29,7 @@ export class CurRecord {
 		this.value = v;
 	}
 }
+*/
 
 export class LinRecord {
 	name;

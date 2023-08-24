@@ -1,6 +1,6 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from './data.js';
-import {Elenco, Slim, Sup, Emph} from './format.js'
+import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from './data.js';
+import {Elenco, Slim, Sup, Emph, Cors} from './format.js'
 
 export const dictio = {
   hom : {
@@ -11,9 +11,9 @@ export const dictio = {
   },
 
   pub : {
-    mtitle : "Pubblications",
-    mtitlem : "PUBBLICATIONS",
-    nothing : "So far, nothing interesting."
+    mtitle : "Publications",
+    mtitlem : "PUBLICATIONS",
+    nothing : "In preparation"
   },
 
   cur : {
@@ -21,108 +21,176 @@ export const dictio = {
     mtitlem : "CURRICULUM",
     generate : "Convert to LaTeX",
     records : [
-      new CurRecord( "Current position",
-        [ new CurRecordV( "June 1, 2023 - now",
-          new Slim(
-            [
-              "Assegno di ricerca (postdoc position) in Mathematics at University of Padua",
-              "Supervisors: prof. Davide Vittone and prof. Annalisa Massaccesi",
-              "Title: Some questions in Geometrie Measure Theory"
-            ])
-        )]),
-      new CurRecord( "Education",
-        [ new CurRecordV( "November 1, 2022 - May 31, 2023",
-          new Slim(
-            [
-              "Assegno di ricerca in Mathematics at University of Rome \"La Sapienza\"",
-              "Supervisor: prof. Emanuele N. Spadaro",
-              "Title: Minimal surfaces and free boundary problems: study of singularities of codimension greater than one"
-            ])
-        ),
-          new CurRecordV( "November 1, 2019-May 29, 2023",
-            new Slim(
-            [
-              "PhD in Mathematics at University of Rome \"La Sapienza\"",
-              "Advisor: prof. Emanuele N. Spadaro",
-              "Thesis: Rectifiability of stationary varifolds branching set with multiplicity at most 2"
-            ])
-          ),
-          new CurRecordV( "August 9-20, 2021",
-          [
-            "Participation at the ",
-            new Sup("30", "th"),
-            " Jyväskylä Summer School, following these courses: ",
-            new Elenco(
-              [
+      {
+        title : "Current position",
+        value : [ 
+          {
+            date : "June 1, 2023 - now",
+            text : new Slim([
+                "Assegno di ricerca (postdoc position) in Mathematics at University of Padua",
                 [
-                  new Emph("Shape Optimization and Free Boundary Problems"),
-                  " (held by prof. Dorin Bucur)"
+                  new Cors("Supervisors:"),
+                  " prof. Davide Vittone and prof. Annalisa Massaccesi"
                 ],
                 [
-                  new Emph("Geometric Evolution Problems"),
-                  " (held by prof. Massimiliano Morini)"
-                ],
-                [
-                  new Emph("Differential Calculus on the Wasserstein Space and Mean Field Games"),
-                  " (held by prof. Pierre Cardaliaguet)"
+                  new Cors("Title:"),
+                  " Some questions in Geometrie Measure Theory"
                 ]
+              ])
+          }
+        ]
+      },
+      {
+        title : "Previous positions",
+        value : [
+          {
+            date : "November 1, 2022 - May 31, 2023",
+            text : new Slim([
+              "Assegno di ricerca in Mathematics at University of Rome \"La Sapienza\"",
+              [
+                new Cors("Supervisor:"),
+                " prof. Emanuele N. Spadaro"
+              ],
+              [
+                new Cors("Title:"),
+                " Minimal surfaces and free boundary problems: study of singularities of codimension greater than one"
               ]
-            )
-          ]),
-          new CurRecordV ("July 22 - August 16, 2019",
-            [
-              "Participation at Scuola Matematica Interuniversitaria in Perugia, attending the following courses: ",
-              new Elenco(
-                [
+            ])
+          }
+        ]
+      },
+      {
+        title : "Education",
+        value : [ 
+          {
+            date : "November 1, 2019-May 29, 2023",
+            text : new Slim([
+              "PhD in Mathematics at University of Rome \"La Sapienza\"",
+              [
+                new Cors("Advisor:"),
+                " prof. Emanuele N. Spadaro"
+              ],
+              [
+                new Cors("Thesis:"),
+                " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+              ]
+            ])
+          },
+          {
+            date : "2017-2019",
+            text : new Slim([
+              "Master's degree in Mathematics at University of Naples \"Federico II\"",
+              [
+                new Cors("Thesis:"),
+                " The quantitative isoperimetric inequality"
+              ],
+              [
+                new Cors("Advisor:"),
+                " prof. Nicola Fusco"
+              ],
+              [
+                new Cors("Graduation mark:"),
+                " 110/110 cum laude"
+              ]
+            ])
+          },
+          {
+            date : "2014-2017",
+            text : new Slim([
+              "Bachelor's degree in Mathematics at University of Naples \"Federico II\"",
+              [
+                new Cors("Thesis:"),
+                " Il teorema di Rouché e applicazioni"
+              ],
+              [
+                new Cors("Advisor:"),
+                " prof. Luigi Greco"
+              ],
+              [
+                new Cors("Graduation mark:"),
+                " 110/110 cum laude"
+              ]
+            ])
+          },
+          {
+            date : "2009-2014",
+            text : "Secondary education."
+          }
+        ]
+      },
+      {
+        title : "Schools and workshops",
+        value : [
+          {
+            date : "August 9-20, 2021",
+            text : [
+              "Participation at the ",
+              new Sup("30", "th"),
+              " Jyväskylä Summer School, following these courses: ",
+              new Elenco([
                   [
-                    new Emph("Functional Analysis"),
-                    " (held by prof. Marius Ghergu, final mark A+)"
+                    new Emph("Shape Optimization and Free Boundary Problems"),
+                    " (held by prof. Dorin Bucur)"
                   ],
                   [
-                    new Emph("Differential Geometry"),
-                    " (held by prof. Liviu Ornea, final mark A++)"
+                    new Emph("Geometric Evolution Problems"),
+                    " (held by prof. Massimiliano Morini)"
+                  ],
+                  [
+                    new Emph("Differential Calculus on the Wasserstein Space and Mean Field Games"),
+                    " (held by prof. Pierre Cardaliaguet)"
                   ]
-                ]
-              )
+                ])
             ]
-          ),
-          new CurRecordV( "2017-2019",
-            new Slim(
-              [
-                "Master's degree in Mathematics at University of Naples \"Federico II\"",
-                "Thesis: The quantitative isoperimetric inequality",
-                "Advisor: prof. Nicola Fusco",
-                "Graduation mark: 110/110 cum laude"
-              ]
-            )
-          ),
-          new CurRecordV( "2014-2017",
-            new Slim(
-              [
-                "Bachelor's degree in Mathematics at University of Naples \"Federico II\"",
-                "Thesis: Il teorema di Rouché e applicazioni",
-                "Advisor: prof. Luigi Greco",
-                "Graduation mark: 110/110 cum laude"
-              ]
-            )
-          ),
-          new CurRecordV( "2009-2014",
-            "Secondary education.")
-        ]),
-      new CurRecord( "Prizes and awards",
-        [ new CurRecordV( "June 10, 2016",
-          "Prize \"Buon compleanno Federico II\" due to excellence of his cursus studiorum"),
-          new CurRecordV( "May 8-11, 2014",
-            "Silver medal at Italian National Mathematical Olympiad."),
-          new CurRecordV( "May 9-12, 2013",
-            "Bronze medal at Italian National Mathematical Olympiad."),
-          new CurRecordV( "May 5-8, 2011",
-            "Participation at Italian National Mathematical Olympiad.")
-        ]),
-      new CurRecord( "Other activities",
-        [ new CurRecordV( "November 1, 2018 - September 6, 2019",
-          "Tutoring activity about \"Analisi 1\" course of first year students in Mathematics at University of Naples \"Federico II\"")
-        ])
+          },
+          {
+            date : "July 22 - August 16, 2019",
+            text : [
+              "Participation at Scuola Matematica Interuniversitaria in Perugia, attending the following courses: ",
+              new Elenco([
+                [
+                  new Emph("Functional Analysis"),
+                  " (held by prof. Marius Ghergu, final mark A+)"
+                ],
+                [
+                  new Emph("Differential Geometry"),
+                  " (held by prof. Liviu Ornea, final mark A++)"
+                ]
+              ])
+            ]
+          },
+        ]
+      },
+      {
+        title : "Prizes and awards",
+        value : [ 
+          {
+            date : "June 10, 2016",
+            text : "Prize \"Buon compleanno Federico II\" due to excellence of his cursus studiorum"
+          },
+          {
+            date : "May 8-11, 2014",
+            text : "Silver medal at Italian National Mathematical Olympiad."
+          },
+          {
+            date : "May 9-12, 2013",
+            text : "Bronze medal at Italian National Mathematical Olympiad."
+          },
+          {
+            date : "May 5-8, 2011",
+            text : "Participation at Italian National Mathematical Olympiad."
+          }
+        ]
+      },
+      {
+        title : "Other activities",
+        value : [ 
+          {
+            date : "November 1, 2018 - September 6, 2019",
+            text : "Tutoring activity about \"Analisi 1\" course of first year students in Mathematics at University of Naples \"Federico II\""
+          }
+        ]
+      }
     ]
   },
 
@@ -132,26 +200,29 @@ export const dictio = {
     Rname : "Resource name",
     Rlan : "Language",
     Rtype : "File type",
-    war : "All these documents are only draft. <br /> If you find errors or if you want to make a remark please contact me.",
 
     RES : [
-      new ResRecord ( "Topics in Functional Analysis",
+      new ResRecord ( "PhD Thesis",
+        "English",
+        "PDF",
+        "assets/res/Tesi_dottorato_De_Donato.pdf"),
+      new ResRecord ( "Topics in Functional Analysis (draft)",
         "Italian",
         "PDF",
         "assets/res/AnalisiFunzionale.pdf" ),
-      new ResRecord ( "Notes about Advanced Group Theory",
+      new ResRecord ( "Notes about Advanced Group Theory (draft)",
         "Italian",
         "PDF",
         "assets/res/IstAlgSup.pdf" ),
-      new ResRecord ( "Notes about Algebraic Geometry",
+      new ResRecord ( "Notes about Algebraic Geometry (draft)",
         "Italian",
         "PDF",
         "assets/res/geoma.pdf" ),
-      new ResRecord ( "Limits in Two or more variables",
+      new ResRecord ( "Limits in Two or more variables (draft)",
         "Italian",
         "PDF",
         "assets/res/formula_it.pdf" ),
-      new ResRecord ( "Generalized Fibonacci sequences",
+      new ResRecord ( "Generalized Fibonacci sequences (draft)",
         "Italian",
         "PDF",
         "assets/res/Fibonacci.pdf" )

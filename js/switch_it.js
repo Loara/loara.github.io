@@ -1,6 +1,6 @@
 
-import { ResRecord, CurRecord, CurRecordV, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.js';
-import {Elenco, Slim, Sup, Emph} from './format.js'
+import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.js';
+import {Elenco, Slim, Sup, Emph, Cors} from './format.js'
 
 export const dictio = {
 
@@ -14,7 +14,7 @@ export const dictio = {
   pub : {
     mtitle : "Pubblicazioni",
     mtitlem : "PUBBLICAZIONI",
-    nothing : "Nulla di nuovo sul fronte occidentale."
+    nothing : "In preparazione"
   },
 
   cur : {
@@ -22,40 +22,114 @@ export const dictio = {
     mtitlem : "CURRICULUM",
     generate : "Converti in LaTeX",
     records : [
-      new CurRecord( "Posizione attuale",
-        [ new CurRecordV( "1 giugno 2023 - ora",
-          new Slim(
-            [
+      {
+        title : "Posizione attuale",
+        value : [
+          {
+            date : "1 giugno 2023 - ora",
+            text : new Slim([
               "Assegno di ricerca in Matematica all'Università di Padova",
-              "Referenti: prof. Davide Vittone e prof. Annalisa Massaccesi",
-              "Titolo: Alcune questioni di Teoria Geometrica della Misura"
-            ]
-          )
-        )]),
-      new CurRecord( "Formazione",
-        [ new CurRecordV( "1 novembre 2022 - 31 maggio 2023",
-          new Slim(
-            [
-              "Assegno di ricerca in Matematica all'Università di Roma \"La Sapienza\"",
-              "Referente: prof. Emanuele N. Spadaro",
-              "Titolo: Superfici minime e problemi a frontiera libera: studio delle singolarità di codimensione maggiore di uno"
-            ]
-          )),
-          new CurRecordV( "1 novembre 2019-29 maggio 2023",
-          new Slim(
-            [
-              "Dottorato in Matematica all'Università di Roma \"La Sapienza\"",
-              "Relatore: prof. Emanuele N. Spadaro",
-              "Tesi: Rectifiability of stationary varifolds branching set with multiplicity at most 2"
-            ]
-          )),
-          new CurRecordV( "9-20 agosto 2021",
-          [
-            "Partecipazione alla ",
-            new Sup("30", "th"),
-            " Jyväskylä Summer School, frequentando i seguenti corsi: ",
-            new Elenco(
               [
+                new Cors("Referenti:"),
+                " prof. Davide Vittone e prof. Annalisa Massaccesi"
+              ],
+              [
+                new Cors("Titolo:"),
+                " Alcune questioni di Teoria Geometrica della Misura"
+              ]
+            ])
+          }
+        ]
+      },
+      {
+        title : "Posizioni precedenti",
+        value : [
+          {
+            date : "1 novembre 2022 - 31 maggio 2023",
+            text : new Slim([
+              "Assegno di ricerca in Matematica all'Università di Roma \"La Sapienza\"",
+              [
+                new Cors("Referente:"),
+                " prof. Emanuele N. Spadaro",
+              ],
+              [
+                new Cors("Titolo:"),
+                " Superfici minime e problemi a frontiera libera: studio delle singolarità di codimensione maggiore di uno"
+              ]
+            ])
+          }
+        ]
+      },
+      {
+        title : "Formazione",
+        value : [
+          {
+            date : "1 novembre 2019-29 maggio 2023",
+            text : new Slim([
+              "Dottorato in Matematica all'Università di Roma \"La Sapienza\"",
+              [
+                new Cors("Relatore:"),
+                " prof. Emanuele N. Spadaro"
+              ],
+              [
+                new Cors("Tesi:"),
+                " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+              ]
+            ])
+          },
+          
+          {
+            date : "2017-2019",
+            text : new Slim([
+              "Laurea magistrale in Matematica presso l'Università di Napoli \"Federico II\"",
+              [
+                new Cors("Tesi:"),
+                " The quantitative isoperimetric inequality"
+              ],
+              [
+                new Cors("Relatore:"),
+                " prof. Nicola Fusco"
+              ],
+              [
+                new Cors("Voto finale:"),
+                " 110/110 cum laude"
+              ]
+            ])
+          },
+          {
+            date : "2014-2017",
+            text : new Slim([
+              "Laurea triennale in Matematica presso l'Università di Napoli \"Federico II\"",
+              [
+                new Cors("Tesi:"),
+                " Il teorema di Rouché e applicazioni"
+              ],
+              [
+                new Cors("Relatore:"),
+                " Luigi Greco"
+              ],
+              [
+                new Cors("Voto finale:"),
+                " 110/110 cum laude"
+              ]
+            ])
+          },
+          {
+            date : "2009-2014",
+            text : "Scuola superiore."
+          }
+        ]
+      },
+      {
+        title : "Scuole e workshops",
+        value : [
+          {
+            date : "9-20 agosto 2021",
+            text : [
+              "Partecipazione alla ",
+              new Sup("30", "th"),
+              " Jyväskylä Summer School, frequentando i seguenti corsi: ",
+              new Elenco([
                 [
                   new Emph("Shape Optimization and Free Boundary Problems"),
                   " (tenuto dal prof. Dorin Bucur)"
@@ -68,63 +142,57 @@ export const dictio = {
                   new Emph("Differential Calculus on the Wasserstein Space and Mean Field Games"),
                   " (tenuto dal prof. Pierre Cardaliaguet)"
                 ]
-              ]
-            )
-          ]),
-          new CurRecordV ("22 luglio - 16 agosto 2019",
-            [
-              "Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, seguendo i seguenti corsi: ",
-              new Elenco(
-                [
-                  [
-                    new Emph("Functional Analysis"),
-                    " (tenuto dal prof. Marius Ghergu, voto finale A+)"
-                  ],
-                  [
-                    new Emph("Differential Geometry"),
-                    " (tenuto dal prof. Liviu Ornea, voto finale A++)"
-                  ]
-                ]
-              )
+              ])
             ]
-          ),
-          new CurRecordV( "2017-2019",
-            new Slim(
-              [
-                "Laurea magistrale in Matematica presso l'Università di Napoli \"Federico II\"",
-                "Tesi: The quantitative isoperimetric inequality",
-                "Relatore: prof. Nicola Fusco",
-                "Voto finale: 110/110 cum laude"
-              ]
-            )
-          ),
-          new CurRecordV( "2014-2017",
-            new Slim(
-              [
-                "Laurea triennale in Matematica presso l'Università di Napoli \"Federico II\"",
-                "Tesi: Il teorema di Rouché e applicazioni",
-                "Relatore: Luigi Greco",
-                "Voto finale: 110/110 cum laude"
-              ]
-            )
-          ),
-          new CurRecordV( "2009-2014",
-            "Scuola superiore.")
-        ]),
-      new CurRecord( "Premi e riconoscimenti",
-        [ new CurRecordV( "10 giugno 2016",
-          "Premio \"Buon compleanno Federico II\" per l'eccellenza del cursus studiorum"),
-          new CurRecordV( "8-11 maggio 2014",
-            "Medaglia d'argento alla fase nazionale delle Olimpiadi della Matematica"),
-          new CurRecordV( "9-12 maggio 2013",
-            "Medaglia di bronzo alla fase nazionale delle Olimpiadi della Matematica"),
-          new CurRecordV( "5-8 maggio 2011",
-            "Partecipazione alla fase nazionale delle Olimpiadi della Matematica")
-        ]),
-      new CurRecord( "Altre attività",
-        [ new CurRecordV( "1 novembre 2018 - 6 settembre 2019",
-          "Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\"")
-        ])
+          },
+          {
+            date : "22 luglio - 16 agosto 2019",
+            text : [
+              "Partecipazione alla Scuola Matematica Interuniversitaria di Perugia, seguendo i seguenti corsi: ",
+              new Elenco([
+                [
+                  new Emph("Functional Analysis"),
+                  " (tenuto dal prof. Marius Ghergu, voto finale A+)"
+                ],
+                [
+                  new Emph("Differential Geometry"),
+                  " (tenuto dal prof. Liviu Ornea, voto finale A++)"
+                ]
+              ])
+            ]
+          }
+        ]
+      },
+      {
+        title : "Premi e riconoscimenti",
+        value : [ 
+          {
+            date : "10 giugno 2016",
+            text : "Premio \"Buon compleanno Federico II\" per l'eccellenza del cursus studiorum"
+          },
+          {
+            date : "8-11 maggio 2014",
+            text : "Medaglia d'argento alla fase nazionale delle Olimpiadi della Matematica"
+          },
+          {
+            date : "9-12 maggio 2013",
+            text : "Medaglia di bronzo alla fase nazionale delle Olimpiadi della Matematica"
+          },
+          {
+            date : "5-8 maggio 2011",
+            text : "Partecipazione alla fase nazionale delle Olimpiadi della Matematica"
+          }
+        ]
+      },
+      {
+        title : "Altre attività",
+        value : [ 
+          {
+            date : "1 novembre 2018 - 6 settembre 2019",
+            text : "Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\""
+          }
+        ]
+      }
     ]
   },
 
@@ -134,26 +202,29 @@ export const dictio = {
     Rname : "Nome risorsa",
     Rlan : "Lingua",
     Rtype : "Tipo di file",
-    war : "Tutti questi documenti sono da considerarsi bozze e possono contenere errori. <br /> Se trovi qualche errore o vuoi fare una semplice osservazione contattami.",
 
     RES : [
-      new ResRecord ( "Appunti di Analisi Funzionale",
+      new ResRecord ( "Tesi di dottorato",
+        "Inglese",
+        "PDF",
+        "assets/res/Tesi_dottorato_De_Donato.pdf"),
+      new ResRecord ( "Appunti di Analisi Funzionale (bozza)",
         "Italiano",
         "PDF",
         "assets/res/AnalisiFunzionale.pdf" ),
-      new ResRecord ( "Appunti di Teoria dei Gruppi avanzata",
+      new ResRecord ( "Appunti di Teoria dei Gruppi avanzata (bozza)",
         "Italiano",
         "PDF",
         "assets/res/IstAlgSup.pdf" ),
-      new ResRecord ( "Appunti di Geometria Algebrica",
+      new ResRecord ( "Appunti di Geometria Algebrica (bozza)",
         "Italiano",
         "PDF",
         "assets/res/geoma.pdf" ),
-      new ResRecord ( "Limiti in due o più variabili",
+      new ResRecord ( "Limiti in due o più variabili (bozza)",
         "Italiano",
         "PDF",
         "assets/res/formula_it.pdf" ),
-      new ResRecord ( "Successioni di Fibonacci generalizzate",
+      new ResRecord ( "Successioni di Fibonacci generalizzate (bozza)",
         "Italiano",
         "PDF",
         "assets/res/Fibonacci.pdf" )
