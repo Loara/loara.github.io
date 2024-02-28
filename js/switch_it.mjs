@@ -1,6 +1,5 @@
-
-import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.js';
-import {Elenco, Slim, Sup, Emph, Cors} from './format.js'
+import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from '/js/data.mjs';
+import {Elenco, Slim, Sup, Emph, Cors, RefURL} from './format.mjs'
 
 export const dictio = {
 
@@ -14,7 +13,7 @@ export const dictio = {
   pub : {
     mtitle : "Pubblicazioni",
     mtitlem : "PUBBLICAZIONI",
-    nothing : "In preparazione"
+    preprint : "Preprints"
   },
 
   cur : {
@@ -31,7 +30,7 @@ export const dictio = {
               "Assegno di ricerca in Matematica all'Università di Padova",
               [
                 new Cors("Referenti:"),
-                " prof. Davide Vittone e prof. Annalisa Massaccesi"
+                  " prof. Annalisa Massaccesi and prof. Davide Vittone"
               ],
               [
                 new Cors("Titolo:"),
@@ -74,7 +73,12 @@ export const dictio = {
               [
                 new Cors("Tesi:"),
                 " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+              ],
+              [
+                new Cors("Link: "),
+                new RefURL("https://iris.uniroma1.it/retrieve/a24aa232-fd66-4b20-a58b-d03701a94541/Tesi_dottorato_DeDonato.pdf"),
               ]
+
             ])
           },
           
@@ -117,6 +121,59 @@ export const dictio = {
           {
             date : "2009-2014",
             text : "Scuola superiore."
+          }
+        ]
+      },
+      {
+        title : "Insegnamento",
+        value : [
+          {
+            date : "2 ottobre 2023 - ora",
+            text : [
+              new Slim([
+                "Docente associato per una parte del corso \"Analisi Uno (matricole pari)\" del Corso di Laurea in Informatica dell'Università di Padova.",
+                [
+                  new Cors("Docente di ruolo:"),
+                  " Paolo Musolino"
+                ]
+              ])
+            ]
+          },
+          {
+            date : "1 novembre  2018 - 6 settembre 2019",
+            text : "Tutoraggio del corso \"Analisi 1\" del Corso di Laurea in Matematica all'Università di Napoli \"Federico II\""
+          }
+        ]
+      },
+      {
+        title : "Seminari",
+        value : [
+          {
+            date : "14 febbraio 2024",
+            text : [
+              new Cors("XXXIII Convegno Nazionale di Calcolo delle Variazioni"),
+              " a Riccione. ",
+              new Cors("Titolo:"),
+              " Regularity of stationary surfaces with codimension at least 2."
+            ]
+          },
+          {
+            date : "23 gennaio 2024",
+            text : [
+              new Cors("MiC Mathematics in Conversation"),
+              " presso l'Università di Padova. ",
+              new Cors("Titolo:"),
+              " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+            ]
+          },
+          {
+            date : "12 dicembre 2022",
+            text : [
+              new Cors("Seminari di Analisi Matematica"),
+              " presso l'Università di Roma La Sapienza. ",
+              new Cors("Titolo:"),
+              " Structure of singular set with multiplicity 2 of minimal surfaces"
+            ]
           }
         ]
       },
@@ -181,15 +238,6 @@ export const dictio = {
           {
             date : "5-8 maggio 2011",
             text : "Partecipazione alla fase nazionale delle Olimpiadi della Matematica"
-          }
-        ]
-      },
-      {
-        title : "Altre attività",
-        value : [ 
-          {
-            date : "1 novembre 2018 - 6 settembre 2019",
-            text : "Tutoraggio per il corso \"Analisi 1\" per gli studenti del primo anno in Matematica presso l'Università di Napoli \"Federico II\""
           }
         ]
       }

@@ -1,6 +1,6 @@
 
-import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from './data.js';
-import {Elenco, Slim, Sup, Emph, Cors} from './format.js'
+import { ResRecord, LinRecord, LinCos, Lin_Logo, LinCos_Logo } from './data.mjs';
+import {Elenco, Slim, Sup, Emph, Cors, RefURL} from './format.mjs'
 
 export const dictio = {
   hom : {
@@ -13,7 +13,7 @@ export const dictio = {
   pub : {
     mtitle : "Publications",
     mtitlem : "PUBLICATIONS",
-    nothing : "In preparation"
+    preprint : "Preprints"
   },
 
   cur : {
@@ -30,7 +30,7 @@ export const dictio = {
                 "Assegno di ricerca (postdoc position) in Mathematics at University of Padua",
                 [
                   new Cors("Supervisors:"),
-                  " prof. Davide Vittone and prof. Annalisa Massaccesi"
+                  " prof. Annalisa Massaccesi and prof. Davide Vittone"
                 ],
                 [
                   new Cors("Title:"),
@@ -41,7 +41,7 @@ export const dictio = {
         ]
       },
       {
-        title : "Previous positions",
+        title : "Career",
         value : [
           {
             date : "November 1, 2022 - May 31, 2023",
@@ -73,6 +73,10 @@ export const dictio = {
               [
                 new Cors("Thesis:"),
                 " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+              ],
+              [
+                new Cors("Link: "),
+                new RefURL("https://iris.uniroma1.it/retrieve/a24aa232-fd66-4b20-a58b-d03701a94541/Tesi_dottorato_DeDonato.pdf"),
               ]
             ])
           },
@@ -115,6 +119,59 @@ export const dictio = {
           {
             date : "2009-2014",
             text : "Secondary education."
+          }
+        ]
+      },
+      {
+        title : "Teaching",
+        value : [
+          {
+            date : "October 2, 2023 - now",
+            text : [
+              new Slim([
+                "Lecturer for part of the course \"Analisi Uno (matricole pari)\" of the B. Sc. Program in Computer Science at University of Padua.",
+                [
+                  new Cors("Teacher in charge:"),
+                  " Paolo Musolino"
+                ]
+              ])
+            ]
+          },
+          {
+            date : "November 1, 2018 - September 6, 2019",
+            text : "Tutoring activity about \"Analisi 1\" course of first year students in Mathematics at University of Naples \"Federico II\""
+          }
+        ]
+      },
+      {
+        title : "Seminars",
+        value : [
+          {
+            date : "February 14, 2024",
+            text : [
+              new Cors("XXXIII Convegno Nazionale di Calcolo delle Variazioni"),
+              " at Riccione. ",
+              new Cors("Title:"),
+              " Regularity of stationary surfaces with codimension at least 2."
+            ]
+          },
+          {
+            date : "January 23, 2024",
+            text : [
+              new Cors("MiC Mathematics in Conversation"),
+              " at University of Padova. ",
+              new Cors("Title:"),
+              " Rectifiability of stationary varifolds branching set with multiplicity at most 2"
+            ]
+          },
+          {
+            date : "December 12, 2022",
+            text : [
+              new Cors("Seminari di Analisi Matematica"),
+              " at University of Rome La Sapienza. ",
+              new Cors("Title:"),
+              " Structure of singular set with multiplicity 2 of minimal surfaces"
+            ]
           }
         ]
       },
@@ -181,15 +238,6 @@ export const dictio = {
             text : "Participation at Italian National Mathematical Olympiad."
           }
         ]
-      },
-      {
-        title : "Other activities",
-        value : [ 
-          {
-            date : "November 1, 2018 - September 6, 2019",
-            text : "Tutoring activity about \"Analisi 1\" course of first year students in Mathematics at University of Naples \"Federico II\""
-          }
-        ]
       }
     ]
   },
@@ -236,6 +284,12 @@ export const dictio = {
       LinCos ("Institutional page",
         "https://www.math.unipd.it/en/department/people/paolo.de_donato/",
         "https://www.math.unipd.it/en/depa..."),
+      LinCos_Logo ("arXiv",
+        "https://arxiv.org/search/math?searchtype=author&query=De+Donato,+P",
+        "https://arxiv.org/search/math?sea...",
+        "arxiv-logomark-small.svg"),
+      new LinRecord ("CvGMT",
+        "https://cvgmt.sns.it/person/5088/"),
       Lin_Logo ("GitHub page",
         "https://github.com/Loara",
         "GitHub-Mark-120px-plus.png"),

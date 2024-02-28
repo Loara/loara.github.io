@@ -81,7 +81,7 @@ export class Slim{
       return "";
     let st = formatTex(this.ar[0]);
     for(let i=1; i<this.ar.length; i++)
-      st += "<br>" + formatTex(this.ar[i]);
+      st += "<br><br>" + formatTex(this.ar[i]);
     return st;
   }
 }
@@ -129,95 +129,17 @@ export class Sup{
   }
 }
 
-/*
-export function formattaHTML(newPar, obj){
-	if(obj == null)
-		return "";
-	else if(Array.isArray(obj)){
-		let st = "";
-		if(newPar){
-			for(let V of obj)
-				st += "<p>" + formattaHTML(false, V) + "</p>";
-		}
-		else{
-			for(let V of obj)
-				st += formattaHTML(false, V) + " ";
-		}
-		return st;
-	}
-	else if(newPar){
-		return "<p>" + formattaHTML(false, obj) + "</p>";
-	}
-	else{
-		if(typeof obj == "string"){
-			return obj;
-		}
-		else if("elenco" in obj){
-			let st = "<ul>";
-			for(let V of obj["elenco"])
-				st += "<li>" + formattaHTML(false, V) + "</li>";
-			st += "</ul>";
-			return st;
-		}
-		else if("slim" in obj){
-			let st = "";
-			for(let V of obj["slim"])
-				st += formattaHTML(false, V) + "<br>";
-			return st;
-		}
-		else if("emph" in obj){
-			return "<b>" + formattaHTML(false, obj["emph"]) + "</b>";
-		}
-		else if("sup" in obj){
-			return formattaHTML(false, obj["val"]) + "<sup>" + formattaHTML(false, obj["sup"]) + "</sup>";
-		}
-		else return "";
-	}
-}
+export class RefURL{
+  constructor(link){
+    this.link = link;
+  }
 
-export function formattaLaTeX(newPar, obj){
-	if(obj == null)
-		return "";
-	else if(Array.isArray(obj)){
-		let st = "";
-		if(newPar){
-			for(let V of obj)
-				st += formattaLaTeX(false, V) + "<br><br>";
-		}
-		else{
-			for(let V of obj)
-				st += formattaLaTeX(false, V) + " ";
-		}
-		return st;
-	}
-	else if(newPar){
-		return formattaLaTeX(false, obj) + "<br><br>";
-	}
-	else{
-		if(typeof obj == "string"){
-			return obj;
-		}
-		else if("elenco" in obj){
-			let st = "\\begin{itemize}<br>";
-			for(let V of obj["elenco"])
-				st += "\\item " + formattaLaTeX(false, V) + "<br>";
-			st += "\\end{itemize}<br>";
-			return st;
-		}
-		else if("slim" in obj){
-			let st = "";
-			for(let V of obj["slim"])
-				st += formattaLaTeX(false, V) + "<br><br>";
-			return st;
-		}
-		else if("emph" in obj){
-			return "\\emph{" + formattaLaTeX(false, obj["emph"]) + "}";
-		}
-		else if("sup" in obj){
-			return formattaLaTeX(false, obj["val"]) + "\\textsuperscript{" + formattaLaTeX(false, obj["sup"]) + "}";
-		}
-		else return "";
-	}
+  fH(){
+    return "<a href =\"" + this.link + "\" style=\"font-family:monospace\">" + this.link + "</a>";
+  }
+
+  fT(){
+    return "\\url{" + this.link + "}";
+  }
 }
-*/
 

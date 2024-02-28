@@ -13,7 +13,7 @@
     <script type="text/javascript">'use strict';</script>
     <script src="/js/common.js"></script>
     <script type="module">
-        import * as defaults from '/js/defaults.js';
+        import * as defaults from '/js/defaults.mjs';
         window.cid = defaults.defid;
         window.cpag = defaults.defpag;
 
@@ -49,20 +49,20 @@
 
 
 
-<body style="background:white">
+<body>
 
 	<header class="bluebak">
         <div class="filler"></div>
         <h1 id="mtitle">PAOLO DE DONATO</h1>
         <div class="filler"></div>
         <nav>
-          <div class="nav_but" onclick="lan_toggle()"><span id="nav_lan_button"></span></div>
-          <div class="filler"></div>
+          <button type="button" id="nav_lan_button" onclick="lan_toggle()"></button>
+          <div style="flex:1;"></div>
 
           <div class="nav_button"><div id="nav_label" onclick="pag_toggle()"></div></div>
 
-          <div class="nav_menu">
-            <a id="hom" class="n-home" href="#" onclick="mainpagem()"></a>
+          <div id="nav_menu">
+            <a id="hom" class="n-hom" href="#" onclick="mainpagem()"></a>
             <a id="cur" class="n-cur" href="#" onclick="curpagem()"></a>
             <a id="pub" class="n-pub" href="#" onclick="pubpagem()"></a>
             <a id="res" class="n-res" href="#" onclick="respagem()"></a>
@@ -73,7 +73,7 @@
     <div id="nav_zero">
       <div id="nav_lan_menu" class="nav_drop bluebak"></div>
       <div id="nav_pag_menu" class="nav_drop bluebak">
-        <a id="hom2" class="n-home" href="#" onclick="mainpage2()"></a>
+        <a id="hom2" class="n-hom" href="#" onclick="mainpage2()"></a>
         <a id="cur2" class="n-cur" href="#" onclick="curpage2()"></a>
         <a id="pub2" class="n-pub" href="#" onclick="pubpage2()"></a>
         <a id="res2" class="n-res" href="#" onclick="respage2()"></a>
@@ -83,10 +83,8 @@
 	<section id="mbody"></section>
 	<main id="main">
 		<noscript>
-		<div class="no_java">
 			<p>You should enable Javascript language in order to continue navigation.</p>
 			<p>If your browser is outdated or you don't see this website correctly, download the latest version of <a href="https://www.mozilla.org/it/firefox/new/">Mozilla Firefox</a> or <a href="https://www.google.com/intl/it/chrome/">Google Chrome</a>.</p>
-		</div>
 		</noscript>
 	</main>
 

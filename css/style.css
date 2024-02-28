@@ -31,9 +31,10 @@
 }
 
 * {
-	margin: 0;/* reset*/
-	padding: 0;
-	border: 0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;/* reset*/
+  padding: 0;
+  border: 0;
 }
 
 .email {
@@ -69,71 +70,67 @@
    General styles
    ========================================================================== */
 
-
+/*
 html, body {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 20px;
     margin: 0;
     padding: 0;
     height: 100%;
 
+}*/
+
+html, body {
+  height: 100%;/* per evitare che sia piu corta della pagina */
 }
 
 body{
 	display: flex;
 	flex-direction: column;
-	background-color: #2f2f2f;
+	background-color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: inherit;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-height: 300px;
+  border-bottom: 1px solid black;
 }
+
 
 h1 {
-	font-size: 60px;
+  flex: 1;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 h2 {
-	font-size: 30px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-h3 {
-	font-size: 25px;
+h3, h4, h5, h6 {
+  display: none;
 }
  /*
 	servono tutti e 3 */
 a, a:focus, a:hover {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
 }
 
 .bluebak {
-	background-image: url(../img/ciano.jpeg);
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-attachment: fixed;
-    background-size: cover;
-
-	color: white;
+  background-image: url(../img/ciano.jpeg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.bluebak a {
-	display: block;
-	color: white;
-	background-color: transparent;
-	text-align: center;
-}
-
-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 300px;
-	border-bottom: 1px solid black;
+.bluebak * {
+  color: white;
 }
 
 main {
@@ -142,7 +139,6 @@ main {
 	margin-top: 80px;
 	margin-bottom: 80px;
 }
-
 
 nav{
 	display: flex;
@@ -154,11 +150,21 @@ nav{
 	height: 65px;
 }
 
+#nav_lan_button{
+  display: block flow;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  width: 130px;
+}
+
 .filler{
 	flex-grow: 1;
 }
 
-.nav_menu {
+#nav_menu {
 	display: flex;
 	align-items: stretch;
 	border-style: none;
@@ -166,20 +172,20 @@ nav{
 	margin: 0;
 }
 
-.nav_menu a, .nav_menu a:hover, .nav_menu a:focus{
+#nav_menu a, #nav_menu a:hover, #nav_menu a:focus{
 	padding: 20px 25px;
 	border-bottom: 5px solid transparent;
 }
 
-.nav_menu a{
+#nav_menu a{
 	border-bottom-color: transparent;
 }
 
-.nav_menu a:hover, .nav_menu a:focus{
+#nav_menu a:hover, #nav_menu a:focus{
 	border-bottom-color: white;
 }
 
-.nav_menu a.active{
+#nav_menu a.active{
 	font-weight: bold;
 	border-bottom-color: white;
 }
@@ -211,10 +217,16 @@ nav{
  */
 #nav_zero {
 	display: block;
-	position: relative;
 	height: 0;
 	padding: 0;
 	margin: 0;
+}
+
+#nav_lan_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: absolute;
 }
 
 .nav_drop{
@@ -238,9 +250,10 @@ nav{
 	border-top: 1px solid #FAEBD7;
 	border-bottom: 1px solid #FAEBD7;
 	padding: 20px 25px;
+        text-align: center;
 }
 
-.no_java{
+noscript {
 	background-color: rgba(255, 0, 0, 0.4);
 	padding: 40px 50px;
 	margin: 0 50px;
@@ -294,32 +307,37 @@ footer a:hover {
 	text-shadow: 2px 2px gray;
 }
 
-/*
-curriculum
-*/
-
-.cur{
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-}
- 
-.cur_cont{
+.span_cont{
 	display: flex;
 	text-align: center;
 }
 
-.cur_ltr{
+.span_ltr{
 	flex-grow: 2;
 	flex-basis: 0;
 }
 
-.cur_ctr{
+.span_ctr{
 	display: flex;
 	flex-direction: column;
 	flex-grow: 10;
 	flex-basis: 0;
 }
+
+.pub_row {
+  margin: 15px 0;
+}
+
+/*
+curriculum
+*/
+
+.cur{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+ 
 
 .cur_sect{
 	display: flex;
@@ -425,7 +443,7 @@ table links
 }
 
 .logo {
-	display: inline flow; //equivalente ad inline
+	display: inline flow-root; //equivalente ad inline
 	width: 24px;
 	height: 24px;
 	margin: 0 6px;
@@ -438,11 +456,11 @@ table links
 		text-align: center;
 		vertical-align: middle;
 	}
-	.cur_ltr{
+	.span_ltr{
 		flex-grow: 1;
 		flex-basis: 0;
 	}
-	.nav_menu{
+	#nav_menu{
 		display: none;
 	}
 	.nav_drop{
@@ -473,7 +491,7 @@ table links
 		font-size: 15px;
 	}
 
-	.cur_ltr{
+	.span_ltr{
 		flex-grow: 0;
 		flex-basis: 0;
 	}

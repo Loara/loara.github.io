@@ -1,7 +1,8 @@
 
-import { dictio as dictioEN } from '/js/switch_en.js';
-import { dictio as dictioIT } from '/js/switch_it.js';
-import {formatHTM, formatTex} from '/js/format.js';
+import { dictio as dictioEN } from '/js/switch_en.mjs';
+import { dictio as dictioIT } from '/js/switch_it.mjs';
+import {formatHTM, formatTex} from '/js/format.mjs';
+import {preprints} from '/js/art.mjs';
 
 export const pages = ['hom', 'pub', 'cur', 'res', 'lin'];
 export const defpag = 0;
@@ -59,47 +60,14 @@ export function loadMod() {
 }
 
 export function naming(){
-    let homs = document.getElementsByClassName('n-home');
-    for(let elem of homs){
-        elem.innerHTML = module["hom"]["mtitle"];
+  for(let cls of pages) {
+    for(let elem of document.getElementsByClassName('n-' + cls)){
+      elem.innerHTML = module[cls]["mtitle"];
     }
-    let pubs = document.getElementsByClassName('n-pub');
-    for(let elem of pubs){
-        elem.innerHTML = module["pub"]["mtitle"];
+    for(let elem of document.getElementsByClassName('m-' + cls)){
+      elem.innerHTML = module[cls]["mtitlem"];
     }
-    let curs = document.getElementsByClassName('n-cur');
-    for(let elem of curs){
-        elem.innerHTML = module["cur"]["mtitle"];
-    }
-    let ress = document.getElementsByClassName('n-res');
-    for(let elem of ress){
-        elem.innerHTML = module["res"]["mtitle"];
-    }
-    let lins = document.getElementsByClassName('n-lin');
-    for(let elem of lins){
-        elem.innerHTML = module["lin"]["mtitle"];
-    }
-
-    homs = document.getElementsByClassName('m-home');
-    for(let elem of homs){
-        elem.innerHTML = module["hom"]["mtitlem"];
-    }
-    pubs = document.getElementsByClassName('m-pub');
-    for(let elem of pubs){
-        elem.innerHTML = module["pub"]["mtitlem"];
-    }
-    curs = document.getElementsByClassName('m-cur');
-    for(let elem of curs){
-        elem.innerHTML = module["cur"]["mtitlem"];
-    }
-    ress = document.getElementsByClassName('m-res');
-    for(let elem of ress){
-        elem.innerHTML = module["res"]["mtitlem"];
-    }
-    lins = document.getElementsByClassName('m-lin');
-    for(let elem of lins){
-        elem.innerHTML = module["lin"]["mtitlem"];
-    }
+  }
 }
 
 
@@ -112,15 +80,21 @@ export function mainpage(){
 }
 
 export function pubpage(){
-	window.rmall();
-	document.getElementById("main").innerHTML = "<h2 style=\"text-align:center\">" + module["pub"]["nothing"] + "</h2>";
-	document.getElementById("pub").classList.add("active");
-	document.getElementById("mtitle").innerHTML = module["pub"]["mtitle"];
+  window.rmall();
+  let text = "<h2 style=\"text-align:center\">" + module["pub"]["preprint"] + "</h2>";
+  text += "<div class =\"span_cont\"><div class=\"span_ltr\"></div><div class=\"span_ctr\">";
+  for(let prp of preprints){
+    text += "<div class=\"pub_row\">" + formatHTM(prp) + "</div>";
+  }
+  text += "</div><div class=\"span_ltr\"></div></div>";
+  document.getElementById("main").innerHTML = text;
+  document.getElementById("pub").classList.add("active");
+  document.getElementById("mtitle").innerHTML = module["pub"]["mtitle"];
 }
 
 export function respage(){
 	window.rmall();
-    let text = "<div class =\"container\"><table class=\"table table-hover\">\
+    let text = "<table class=\"table table-hover\">\
 			<thead>\
 				<tr>\
 				<th>"+ module["res"]["Rname"] +"</th>\
@@ -149,7 +123,7 @@ export function respage(){
 
 function get_logo(name){
 	if(name == "")
-		return "";
+		return "<div style=\"background:none\" class=\"logo\"></div>";
 	else{
 		return "<img src=\"/img/" + name + "\" class=\"logo\" />";
 	}
@@ -157,8 +131,7 @@ function get_logo(name){
 
 export function linpage(){
 	window.rmall();
-    let text = "<div class =\"lcont\"><table class=\"ltable\">\
-			<tbody>";
+    let text = "<div class =\"lcont\"><table class=\"ltable\"><tbody>";
 
     for(let RR of module["lin"]["LIN"]){
         text += "<tr>\
@@ -180,8 +153,8 @@ export function curpage(){
 	window.rmall();
     let text = "<div class=\"cur\">\
              <a style=\"text-align:center;color:blue\" href=\"curriculum.htm?lan=" + languages[window.cid] + "\" target=\"_blank\">" + module["cur"]["generate"] + "</a>\
-                <div class =\"cur_cont\">\
-                <div class=\"cur_ltr\"></div><div class=\"cur_ctr\">";
+                <div class =\"span_cont\">\
+                <div class=\"span_ltr\"></div><div class=\"span_ctr\">";
 
     for(let RR of module["cur"]["records"]){
         text += "<div class=\"cur_sect\"><h2>" + RR.title + "</h2>";
@@ -192,7 +165,7 @@ export function curpage(){
         text += "</div>";
     }
 
-    text += "</div><div class=\"cur_ltr\"></div></div>\
+    text += "</div><div class=\"span_ltr\"></div></div>\
              </div>";
 
 	document.getElementById("main").innerHTML = text;
@@ -211,6 +184,12 @@ export function generateCur(){
             %Compile with XeLaTeX or LuaLaTeX<br><br>\
             \\begin{document}<br>\
             \\maketitle<br>";
+
+  text += "\\section{" + module["pub"]["preprint"] + "}<br><br>";
+  for(let ppr of preprints){
+    text += formatTex(ppr) + "<br><br>";
+  }
+
     for(let RR of module["cur"]["records"]){
         text += "\\section{" + RR.title + "}<br><br>";
         text += "&nbsp \\begin{description}<br><br>";
