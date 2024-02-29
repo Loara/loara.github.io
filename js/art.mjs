@@ -7,7 +7,7 @@ export class arXiv{
   }
 
   fH() {
-    return this.au + ", <i>" + this.ti + "</i>, arXiv:<a href =\"https://arxiv.org/abs/" + this.id + "\" target+\"_blank\">" + this.id + "</a> [" + this.cat + "]";
+    return this.au + ", <i>" + this.ti + "</i>, arXiv:<a href =\"https://arxiv.org/abs/" + this.id + "\" target+\"_blank\" class=\"code\">" + this.id + "</a> [<span class=\"code\">" + this.cat + "</span>]";
   }
 
   fT(){

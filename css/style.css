@@ -17,6 +17,9 @@
     src: url('../font/Montserrat-Regular.ttf');
 }
 
+.code {
+  font-family: monospace;
+}
 
 ::-moz-selection {
     background: #f2c2c9;
@@ -467,7 +470,7 @@ table links
         width: 100%;
 	}
 	#nav_label{
-    	display: inline-block;
+    	display: inline flow-root;
 		border: 5px solid white;
 		border-radius: 5px;
 		margin: 10px 25px;

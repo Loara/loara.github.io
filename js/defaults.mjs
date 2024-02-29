@@ -74,7 +74,7 @@ export function naming(){
 
 export function mainpage(){
 	window.rmall();
-	document.getElementById("main").innerHTML = "<div class=\"mainpage\"><img src=\"img/foto.jpg\" class=\"maimage\"><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">" + module["hom"]["description"] + "</h2><div style=\"display: flex; justify-content:flex-end\"><h3 style=\"margin: 0 10%;font-family: \'Indie Flower\';font-style:italic\">" + module["hom"]["author"] + "</h3></div></div></div>";
+	document.getElementById("main").innerHTML = "<div class=\"mainpage\"><img src=\"img/foto.jpg\" class=\"maimage\"><div><h2 style=\"font-family: \'Indie Flower\';margin: 0 5%\">" + module["hom"]["description"] + "</h2><div style=\"display: flex; justify-content:flex-end\"><div style=\"margin: 0 10%;font: italic 1.5rem \'Indie Flower\'\">" + module["hom"]["author"] + "</div></div></div></div>";
 	document.getElementById("hom").classList.add("active");
 	document.getElementById("mtitle").innerHTML = "Paolo De Donato";
 }
