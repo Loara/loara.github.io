@@ -178,7 +178,7 @@ const bol=/<b>.*?<\/b>/g;
 const ita=/<i>.*?<\/i>/g;
 
 export function generateCur(){
-    let text = "\\documentclass[a4paper]{article}<br><br>\
+    let text = "\\documentclass[a4paper]{article}<br>\\usepackage{mathtools}<br>\\usepackage{hyperref}<br>\\usepackage{xurl}<br><br>\
             \\title{Paolo De Donato}<br>\
             \\author{Curriculum vitae}<br><br>\
             %Compile with XeLaTeX or LuaLaTeX<br><br>\
@@ -198,6 +198,13 @@ export function generateCur(){
         }
         text += "&nbsp\\end{description}<br><br>";
     }
+
+  text += "\\section{Links}<br><br>\\begin{description}<br>";
+  for(let RR of module["lin"]["LIN"]){
+    text += "\\item[" + RR.name + "] \\url{" + RR.url +"}<br><br>";
+  }
+  text += "\\end{description}<br><br>"
+
     text += "\\end{document}";
     document.body.innerHTML = text;
 }
