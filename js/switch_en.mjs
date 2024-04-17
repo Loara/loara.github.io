@@ -126,7 +126,7 @@ export const dictio = {
         title : "Teaching",
         value : [
           {
-            date : "October 2, 2023 - now",
+            date : "October 2, 2023 - January 11, 2024",
             text : [
               new Slim([
                 "Lecturer for part of the course \"Analisi Uno (matricole pari)\" of the B. Sc. Program in Computer Science at University of Padua.",

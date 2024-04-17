@@ -128,7 +128,7 @@ export const dictio = {
         title : "Insegnamento",
         value : [
           {
-            date : "2 ottobre 2023 - ora",
+            date : "2 ottobre 2023 - 11 gennaio 2024",
             text : [
               new Slim([
                 "Docente associato per una parte del corso \"Analisi Uno (matricole pari)\" del Corso di Laurea in Informatica dell'Università di Padova.",
