@@ -23,9 +23,28 @@ export const dictio = {
     records : [
       {
         title : "Posizione attuale",
+        value : [ 
+          {
+            date : "1 luglio 2024 - ora",
+            text : new Slim([
+                "Assegno di ricerca in Matematica all'Università di Roma \"La Sapienza\"",
+                [
+                  new Cors("Referente:"),
+                  " prof. Emanuele N. Spadaro"
+                ],
+                [
+                  new Cors("Titolo:"),
+                  " Teoria Geometrica della Misura: struttura delle misure singolari, regolarità e applicazioni al Calcolo delle Variazioni"
+                ]
+              ])
+          }
+        ]
+      },
+      {
+        title : "Posizioni precedenti",
         value : [
           {
-            date : "1 giugno 2023 - ora",
+            date : "1 giugno 2023 - 31 maggio 2024",
             text : new Slim([
               "Assegno di ricerca in Matematica all'Università di Padova",
               [
@@ -37,12 +56,7 @@ export const dictio = {
                 " Alcune questioni di Teoria Geometrica della Misura"
               ]
             ])
-          }
-        ]
-      },
-      {
-        title : "Posizioni precedenti",
-        value : [
+          },
           {
             date : "1 novembre 2022 - 31 maggio 2023",
             text : new Slim([

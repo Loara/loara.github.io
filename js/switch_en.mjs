@@ -25,7 +25,26 @@ export const dictio = {
         title : "Current position",
         value : [ 
           {
-            date : "June 1, 2023 - now",
+            date : "July 1, 2024 - now",
+            text : new Slim([
+                "Assegno di ricerca (postdoc position) in Mathematics at Sapienza University of Rome",
+                [
+                  new Cors("Supervisor:"),
+                  " prof. Emanuele N. Spadaro"
+                ],
+                [
+                  new Cors("Title:"),
+                  " Geometric Measure Theory: structure of singular measures, regularity and applications to Calculus of Variations"
+                ]
+              ])
+          }
+        ]
+      },
+      {
+        title : "Career",
+        value : [ 
+          {
+            date : "June 1, 2023 - May 31, 2024",
             text : new Slim([
                 "Assegno di ricerca (postdoc position) in Mathematics at University of Padua",
                 [
@@ -37,12 +56,7 @@ export const dictio = {
                   " Some questions in Geometrie Measure Theory"
                 ]
               ])
-          }
-        ]
-      },
-      {
-        title : "Career",
-        value : [
+          },
           {
             date : "November 1, 2022 - May 31, 2023",
             text : new Slim([
