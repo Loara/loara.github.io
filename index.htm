@@ -13,35 +13,13 @@
     <script type="text/javascript">'use strict';</script>
     <script src="/js/common.js"></script>
     <script type="module">
-        import * as defaults from '/js/defaults.mjs';
-        window.cid = defaults.defid;
-        window.cpag = defaults.defpag;
-
-        let sear = new URL(window.location.href).searchParams;
-        if( sear.has("lan") ){
-            let fidx = defaults.languages.indexOf(sear.get("lan"));
-            if( fidx != -1 ){
-                window.cid = fidx;
-            }
+        import init from './wasm/pkg/wasm.js';
+        import * as wasm from './wasm/pkg/wasm.js';
+        async function run() {
+            await init();
+            document.getElementById("main").innerHTML = wasm.hello();
         }
-        if( sear.has("pag") ){
-            let fidx = defaults.pages.indexOf(sear.get("pag"));
-            if( fidx != -1 ){
-                window.cpag = fidx;
-            }
-        }
-        defaults.loadMod();
-        defaults.langn();
-        defaults.naming();
-
-        defaults.selectPage();
-
-
-        window.mainpagem = defaults.mainpage;
-        window.pubpagem = defaults.pubpage;
-        window.respagem = defaults.respage;
-        window.curpagem = defaults.curpage;
-        window.linpagem = defaults.linpage;
+        run();
     </script>
 
 
