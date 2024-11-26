@@ -163,6 +163,15 @@ export const dictio = {
         title : "Seminari",
         value : [
           {
+            date : "20 novembre 2024",
+            text : [
+              new Cors("Calculus of Variations and Free Boundary Problems IX"),
+              " all'Università di Pisa. ",
+              new Cors("Titolo:"),
+              " Regularity of stationary varifolds with codimension at least 2."
+            ]
+          },
+          {
             date : "14 febbraio 2024",
             text : [
               new Cors("XXXIII Convegno Nazionale di Calcolo delle Variazioni"),
