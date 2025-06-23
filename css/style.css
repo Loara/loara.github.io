@@ -17,71 +17,12 @@
     src: url('../font/Montserrat-Regular.ttf');
 }
 
-.code {
-  font-family: monospace;
-}
-
-::-moz-selection {
-    background: #f2c2c9;
-    color: #a4003a;
-    text-shadow: none;
-}
-
-::selection {
-    background: #2270c9;
-    color: #a4003a;
-    text-shadow: none;
-}
-
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;/* reset*/
   padding: 0;
   border: 0;
 }
-
-.email {
-	display: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
- hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-.centered {
-	text-align: center;
-}
-
-.mt {
-	margin-top: 80px;
-}
-
-.mb {
-	margin-bottom: 80px;
-}
-
-/* ==========================================================================
-   General styles
-   ========================================================================== */
-
-/*
-html, body {
-    font-weight: 400;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-
-}*/
 
 html, body {
   height: 100%;/* per evitare che sia piu corta della pagina */
@@ -92,56 +33,57 @@ body{
 	flex-direction: column;
 	background-color: white;
 }
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  min-height: 300px;
-  border-bottom: 1px solid black;
-}
-
-
-h1 {
-  flex: 1;
-  text-align: center;
-  font-size: 60px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-h3, h4, h5, h6 {
-  display: none;
-}
  /*
 	servono tutti e 3 */
 a, a:focus, a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .bluebak {
-  background-image: url(../img/ciano.jpeg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: cover;
+    background-image: url(../img/ciano.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .bluebak * {
-  color: white;
+    color: white;
 }
 
-main {
-	flex-grow: 1;
-	color: #4a4a4a;
-	margin-top: 80px;
-	margin-bottom: 80px;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: 300px;
+    border-bottom: 1px solid black;
 }
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+h3, h4, h5, h6 {
+    display: none;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div {
+    flex: 1;
+}
+
+/*
+ * Navigation bar
+ */
 
 nav{
 	display: flex;
@@ -153,18 +95,13 @@ nav{
 	height: 65px;
 }
 
-#nav_lan_button{
+#nav_lang{
   display: block flow;
   background: none;
-  color: white;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   width: 130px;
-}
-
-.filler{
-	flex-grow: 1;
 }
 
 #nav_menu {
@@ -225,13 +162,6 @@ nav{
 	margin: 0;
 }
 
-#nav_lan_menu {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: absolute;
-}
-
 .nav_drop{
 	display: flex;
 	flex-direction: column;
@@ -256,6 +186,49 @@ nav{
         text-align: center;
 }
 
+.code {
+    font-family: monospace;
+}
+
+::selection {
+    background: #2270c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+.email {
+	display: none;
+}
+
+.citation {
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 5%;
+}
+.citation_author {
+    font-family: 'Indie Flower';
+    font-size: 25px;
+    margin: 0 10%;
+    text-align: end;
+}
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	flex-grow: 1;
+	color: #4a4a4a;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
 noscript {
 	background-color: rgba(255, 0, 0, 0.4);
 	padding: 40px 50px;

@@ -17,9 +17,15 @@
         import * as wasm from './wasm/pkg/wasm.js';
         async function run() {
             await init();
-            document.getElementById("main").innerHTML = wasm.hello();
+            try {
+                wasm.start();
+            }
+            catch(error) {
+                console.error(error);
+            }
+            document.getElementById("nav_lang").addEventListener("click", wasm.lan_menu_toggle);
         }
-        run();
+        window.addEventListener("DOMContentLoaded", run, false);
     </script>
 
 
@@ -30,35 +36,35 @@
 <body>
 
 	<header class="bluebak">
-        <div class="filler"></div>
+        <div class="centering">
         <h1 id="mtitle">PAOLO DE DONATO</h1>
-        <div class="filler"></div>
+        </div>
         <nav>
-          <button type="button" id="nav_lan_button" onclick="lan_toggle()"></button>
+          <button type="button" id="nav_lang"></button>
           <div style="flex:1;"></div>
 
-          <div class="nav_button"><div id="nav_label" onclick="pag_toggle()"></div></div>
+          <div class="nav_button"><div id="nav_label" ></div></div>
 
           <div id="nav_menu">
-            <a id="hom" class="n-hom" href="#" onclick="mainpagem()"></a>
-            <a id="cur" class="n-cur" href="#" onclick="curpagem()"></a>
-            <a id="pub" class="n-pub" href="#" onclick="pubpagem()"></a>
-            <a id="res" class="n-res" href="#" onclick="respagem()"></a>
-            <a id="lin" class="n-lin" href="#" onclick="linpagem()"></a>
+            <a class="m-hom" href="#">Test a</a>
+            <a class="n-cur" href="#">Test b</a>
+            <a class="n-pub" href="#">Test c</a>
+            <a class="n-res" href="#">Test d</a>
+            <a class="n-lin" href="#">Test e</a>
           </div>
         </nav>
 	</header>
     <div id="nav_zero">
-      <div id="nav_lan_menu" class="nav_drop bluebak"></div>
+      <div id="nav_lang_menu" class="nav_drop bluebak"></div>
+      <!--
       <div id="nav_pag_menu" class="nav_drop bluebak">
-        <a id="hom2" class="n-hom" href="#" onclick="mainpage2()"></a>
-        <a id="cur2" class="n-cur" href="#" onclick="curpage2()"></a>
-        <a id="pub2" class="n-pub" href="#" onclick="pubpage2()"></a>
-        <a id="res2" class="n-res" href="#" onclick="respage2()"></a>
-        <a id="lin2" class="n-lin" href="#" onclick="linpage2()"></a>
-      </div>
+        <a class="n-hom" href="#"></a>
+        <a class="n-cur" href="#"></a>
+        <a class="n-pub" href="#"></a>
+        <a class="n-res" href="#"></a>
+        <a class="n-lin" href="#"></a>
+      </div> -->
     </div>
-	<section id="mbody"></section>
 	<main id="main">
 		<noscript>
 			<p>You should enable Javascript language in order to continue navigation.</p>
@@ -68,10 +74,10 @@
 
 
     <footer class="bluebak">
-		<div><a href="#" class="m-cur" onclick="curpagem()"></a></div>
-		<div><a href="#" class="m-pub" onclick="pubpagem()"></a></div>
-		<div><a href="#" class="m-res" onclick="respagem()"></a></div>
-		<div><a href="#" class="m-lin" onclick="linpagem()"></a></div>
+		<div><a href="#" class="m-hom"></a></div>
+		<div><a href="#" class="m-pub"></a></div>
+		<div><a href="#" class="m-res"></a></div>
+		<div><a href="#" class="m-lin"></a></div>
 	</footer>
   </body>
 </html>
